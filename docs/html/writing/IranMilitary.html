@@ -1,669 +1,280 @@
 <!doctype html>
 <html>
 <head>
-	
-	<link rel="stylesheet" href="../../css/normalize.css">
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link rel="stylesheet" href="../../css/normalize.css">
 <link rel="stylesheet" href="../../css/skeleton.css">
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>IranMilitary</title><link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
-body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit inherit; background-repeat: inherit inherit; }
-iframe { margin: auto; }
-a.url { word-break: break-all; }
-a:active, a:hover { outline: 0px; }
-.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
-#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 40px; }
-#write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
-#write.first-line-indent li { margin-left: 2em; }
-.for-image #write { padding-left: 8px; padding-right: 8px; }
-body.typora-export { padding-left: 30px; padding-right: 30px; }
-.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
-@media screen and (max-width: 500px) { 
-  body.typora-export { padding-left: 0px; padding-right: 0px; }
-  #write { padding-left: 20px; padding-right: 20px; }
-  .CodeMirror-sizer { margin-left: 0px !important; }
-  .CodeMirror-gutters { display: none !important; }
-}
-#write li > figure:last-child { margin-bottom: 0.5rem; }
-#write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
-button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
-input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
-*, ::after, ::before { box-sizing: border-box; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
-#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
-p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
-p { orphans: 4; }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.8rem; }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.4rem; }
-h5 { font-size: 1.2rem; }
-h6 { font-size: 1rem; }
-.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
-.hidden { display: none; }
-.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
-a { cursor: pointer; }
-sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.701961); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
-sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
-#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
-figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
-tr { break-inside: avoid; break-after: auto; }
-thead { display: table-header-group; }
-table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
-table.md-table td { min-width: 32px; }
-.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
-.CodeMirror-linenumber { }
-.CodeMirror { text-align: left; }
-.CodeMirror-placeholder { opacity: 0.3; }
-.CodeMirror pre { padding: 0px 4px; }
-.CodeMirror-lines { padding: 0px; }
-div.hr:focus { cursor: none; }
-#write pre { white-space: pre-wrap; }
-#write.fences-no-line-wrapping pre { white-space: pre; }
-#write pre.ty-contain-cm { white-space: normal; }
-.CodeMirror-gutters { margin-right: 4px; }
-.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
-.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
-#write .md-fences.mock-cm { white-space: pre-wrap; }
-.md-fences.md-fences-with-lineno { padding-left: 0px; }
-#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
-.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
-.CodeMirror-line, twitterwidget { break-inside: avoid; }
-.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
-.footnotes + .footnotes { margin-top: 0px; }
-.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; background-repeat: initial initial; }
-li div { padding-top: 0px; }
-blockquote { margin: 1rem 0px; }
-li .mathjax-block, li p { margin: 0.5rem 0px; }
-li { margin: 0px; position: relative; }
-blockquote > :last-child { margin-bottom: 0px; }
-blockquote > :first-child, li > :first-child { margin-top: 0px; }
-.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
-#write .footnote-line { white-space: pre-wrap; }
-@media print { 
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
-  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
-  .typora-export * { -webkit-print-color-adjust: exact; }
-  html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
-  .typora-export #write::after { height: 0px; }
-}
-.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
-a img, img a { cursor: pointer; }
-pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
-p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
-p > .md-image:only-child { display: inline-block; width: 100%; }
-#write .MathJax_Display { margin: 0.8em 0px 0px; }
-.md-math-block { width: 100%; }
-.md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
-.md-task-list-item { position: relative; list-style-type: none; }
-.task-list-item.md-task-list-item { padding-left: 0px; }
-.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
-.math { font-size: 1rem; }
-.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
-.md-toc-content { position: relative; margin-left: 0px; }
-.md-toc-content::after, .md-toc::after { display: none; }
-.md-toc-item { display: block; color: rgb(65, 131, 196); }
-.md-toc-item a { text-decoration: none; }
-.md-toc-inner:hover { text-decoration: underline; }
-.md-toc-inner { display: inline-block; cursor: pointer; }
-.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
-.md-toc-h2 .md-toc-inner { margin-left: 2em; }
-.md-toc-h3 .md-toc-inner { margin-left: 4em; }
-.md-toc-h4 .md-toc-inner { margin-left: 6em; }
-.md-toc-h5 .md-toc-inner { margin-left: 8em; }
-.md-toc-h6 .md-toc-inner { margin-left: 10em; }
-@media screen and (max-width: 48em) { 
-  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
-  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
-  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
-  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
-}
-a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
-.footnote-line a:not(.reversefootnote) { color: inherit; }
-.md-attr { display: none; }
-.md-fn-count::after { content: "."; }
-code, pre, samp, tt { font-family: var(--monospace); }
-kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; background-position: initial initial; background-repeat: initial initial; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
-code { text-align: left; }
-a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; background-repeat: initial initial !important; }
-.md-inline-math .MathJax_SVG .noError { display: none !important; }
-.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
-.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
-.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
-.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
-.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
-.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
-.MathJax_SVG * { transition: none; }
-.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
-.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
-.md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
-[lang="mermaid"] .node text { font-size: 1rem; }
-table tr th { border-bottom-width: 0px; }
-video { max-width: 100%; display: block; margin: 0px auto; }
-iframe { max-width: 100%; width: 100%; border: none; }
-.highlight td, .highlight tr { border: 0px; }
-svg[id^="mermaidChart"] { line-height: 1em; }
-mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); background-position: initial initial; background-repeat: initial initial; }
-.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
-mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
 
-
-@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
-@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
-
-:root {
-	--control-text-color: #777;
-}
-
-/**
- * forked from pixyll.com
- * MIT license
- */
-
-h1,
-.h1,
-.f1 {
-	font-size: 2rem;
-	line-height: 2.5rem;
-}
-h2,
-.h2,
-.f2 {
-	font-size: 1.5rem;
-	line-height: 2rem;
-}
-h3,
-.h3,
-.f3 {
-	font-size: 1.25rem;
-	line-height: 1.5rem;
-}
-p,
-.p,
-.f4,
-h4,
-h5,
-h6,
-dl,
-ol,
-ul,
-pre[cid],
-div[cid],
-#typora-source {
-	font-size: 1.125rem;
-	line-height: 1.5rem;
-}
-
-h4 {
-	font-size: 1.13rem;
-}
-/*
- Pixyll
- A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
- Best served with BASSCSS (http://jxnblk.github.io/basscss)
- Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
-
-*/
-
-body {
-	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", Serif;
-	line-height: 1.5rem;
-	font-weight: 400;
-}
-
-#write {
-	max-width: 914px;
-	color: #333;
-}
-
-img {
-	width: auto;
-	max-width: 100%;
-}
-body {
-	font-size: 1.5rem;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-}
-
-.ty-table-edit {
-	background: #ededed;
-}
-
-table {
-	width: 100%;
-	font-size: 1.125rem;
-}
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td,
-table > tfoot > tr > th,
-table > tfoot > tr > td {
-	padding: 12px;
-	line-height: 1.2;
-	vertical-align: top;
-	border-top: 1px solid #333;
-}
-table > thead > tr > th {
-	vertical-align: bottom;
-	border-bottom: 2px solid #333;
-}
-table > caption + thead > tr:first-child > th,
-table > caption + thead > tr:first-child > td,
-table > colgroup + thead > tr:first-child > th,
-table > colgroup + thead > tr:first-child > td,
-table > thead:first-child > tr:first-child > th,
-table > thead:first-child > tr:first-child > td {
-	border-top: 0;
-}
-table > tbody + tbody {
-	border-top: 2px solid #333;
-}
-p {
-	font-weight: 300;
-	line-height: 1.5;
-}
-abbr {
-	border-bottom: 1px black dotted;
-	cursor: help;
-}
-pre,
-code {
-	font-family: Menlo, Monaco, "Courier New", monospace;
-}
-
-code,
-.md-fences  {
-	color: #7a7a7a;
-}
-
-.md-fences {
-	padding: 1.125em;
-	margin-bottom: 0.88em;
-	font-size: 1rem;
-	border: 1px solid #7a7a7a;
-	padding-bottom: 0.5rem;
-	padding-top: 0.5rem;
-}
-
-blockquote {
-	padding: 1.33em;
-	font-style: italic;
-	border-left: 5px solid #7a7a7a;
-	color: #555;
-}
-blockquote em {
-	color: #000;
-}
-blockquote footer {
-	font-size: .85rem;
-	font-style: normal;
-	background-color: #fff;
-	color: #7a7a7a;
-	border-color: transparent;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3,
-h4,
-.h4,
-h5,
-.h5,
-h6,
-.h6 {
-	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: bold;
-	line-height: 1.2;
-	margin: 1em 0 0.5em;
-}
-@media screen and (min-width: 48em) {
-	.h1,
-	h1 {
-		font-size: 3.250rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.298rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.625rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.3rem;
-	}
-	#write>h4.md-focus:before,
-	#write>h5.md-focus:before,
-	#write>h6.md-focus:before{
-		top: 1px;
-	}
-	.p,
-	p,
-	li {
-		font-size: 1.25rem;
-		line-height: 1.8;
-	}
-	table {
-		font-size: 1.25rem;
-	}
-}
-@media (max-width: 48em) {
-	blockquote {
-		margin-left: 1rem;
-		margin-right: 0;
-		padding: 0.5em;
-	}
-	.h1,
-	h1 {
-		font-size: 2.827rem;
-	}
-	.h2,
-	h2 {
-		font-size: 1.999rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.413rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.3rem;
-	}
-}
-@media screen and (min-width: 64em) {
-	.h1,
-	h1 {
-		font-size: 4.498rem;
-	}
-	.h2,
-	h2 {
-		font-size: 2.29rem;
-	}
-	.h3,
-	h3 {
-		font-size: 1.9rem;
-	}
-	.h4,
-	h4 {
-		font-size: 1.591rem;
-	}
-	#write>h4.md-focus:before{
-		top:4px;
-	}
-}
-a {
-	color: #463F5C;
-	text-decoration: underline;
-}
-
-#write {
-	padding-top: 2rem;
-}
-
-#write pre.md-meta-block {
-	min-height: 35px;
-	padding: 0.5em 1em;
-	white-space: pre;
-	border: 0px;
-
-	border-left: 30px #f8f8f8 solid;
-	border-right: 30px #f8f8f8 solid;
-	width: 100vw;
-	max-width: calc(100% + 60px);
-
-	margin-left: -30px;
-	margin-bottom: 2em;
-	margin-top: -2010px;
-	padding-top: 2000px;
-	padding-bottom: 10px;
-	line-height: 1.5em;
-	color: #7a7a7a;
-	background-color: #fafafa;
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-	font-weight: 300;
-	clear: both;
-	padding-left: 0;
-	font-size:1.125rem;
-}
-.md-image>.md-meta {
-	color: #463F5C
-}
-.footnotes {
-	font-size:1.1rem;
-}
-.md-tag {
-	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
-}
-.code-tooltip {
-	background: white;
-}
-.code-tooltip-content {
-	font-size: 1.1rem;
-}
-
-.task-list{
-	padding-left: 0;
-}
-
-.md-task-list-item {
-	padding-left:34px;
-}
-
-.md-task-list-item > input{
-	width: 1.25rem;
-	height: 1.25rem;
-	display: block;
-	-webkit-appearance: initial;
-	top: -0.2rem;
-	margin-left: -1.6em;
-	margin-top: calc(1rem - 7px);
-	border: none;
-}
-
-.md-task-list-item > input:focus{
-	outline: none;
-	box-shadow: none;
-}
-
-.md-task-list-item > input:before{
-	border: 1px solid #555;
-	border-radius: 1.5rem;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: #fff;
-	content: ' ';
-	transition: background-color 200ms ease-in-out;
-	display: block;
-}
-
-.md-task-list-item > input:checked:before,
-.md-task-list-item > input[checked]:before{
-	background: #333;
-	border-width: 2px;
-	display:inline-block;
-	transition: background-color 200ms ease-in-out;
-}
-
-.md-task-list-item > input:checked:after,
-.md-task-list-item > input[checked]:after {
-	opacity: 1;
-}
-
-.md-task-list-item > input:after {
-	opacity: 1;
-	-webkit-transition: opacity 0.05s ease-in-out;
-	-moz-transition: opacity 0.05s ease-in-out;
-	transition: opacity 0.05s ease-in-out;
-	-webkit-transform: rotate(-45deg);
-	-moz-transform: rotate(-45deg);
-	transform: rotate(-45deg);
-	position: absolute;
-	top: 0.4375rem;
-	left: 0.28125rem;
-	width: 0.9375rem;
-	height: 0.5rem;
-	border: 3px solid #fff;
-	border-top: 0;
-	border-right: 0;
-	content: ' ';
-	opacity: 0;
-}
-
-.md-tag {
-	color:inherit;
-}
-
-.md-toc:focus .md-toc-content{
-	margin-top: 19px;
-}
-
-#typora-sidebar {
-	font-size:1rem !important;
-}
-
-.html-for-mac #typora-sidebar {
-	background-color:white;
-}
-
-.outline-content li, .outline-content ul {
-	font-size:1rem !important;
-}
-
-.outline-title {
-	line-height: inherit;
-	margin-top: 10px;
-}
-
-.outline-expander {
-	width: 18px;
-}
-
-.outline-expander:before {
- 	content: "+";
-	font-family: inherit;
-	color: rgb(108, 108, 108); 
-  	font-size: 1.5rem;
- 	top: 0.1rem;
-}
-
-.outline-expander:hover:before {
-	content: "+";
-}
-
-.outline-item-open>.outline-item>.outline-expander:before{
-	content: "-";
-}
-
-/** source code mode */
-#typora-source {
-	font-family: Courier, monospace;
-    color: #6A6A6A;
-}
-
-.os-windows #typora-source {
-	font-family: inherit;
-}
-
-.cm-s-typora-default .cm-header, 
-.cm-s-typora-default .cm-property,
-.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
-	color: #428bca;
-}
-
-.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
-	color: #777777;
-}
-
-.md-diagram-panel {
-	margin-top: 24px;
-	margin-left: -1.2em;
-}
-
-.md-mathjax-midline {
-	background: #fafafa;
-}
-
-.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
-.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
-    bottom: -3.4em;
-}
-
-.dropdown-menu .divider {
-	border-color: #e5e5e5;
-}
-
- .typora-export li, .typora-export p, .typora-export,  .footnote-line {white-space: normal;} 
-</style>
-</head>
-<body class='typora-export' >
+<title>IranMilitary</title>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="../../js/scripts.js"></script>
-    <script>document.body.className += 'fade-out';</script>
-  
-	<!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns" style="margin-top: 1%" align = "right">
-        <a href= "../../index.html">
-          <img src="../../images/LozTextLogo.jpg" alt="Loz Logo" align = "left" style="width:90px;height:100px;">
-        </a>
-          <a class="button" href="../projects.html">Projects</a>
-          <a class="button" href="../writing.html">Writing</a>
-          <a class="button" href="../dataSci.html">Data Science</a>
-          <a class="button" href="../about.html">About Us</a>
-      </div>
-    </div>
-  </div>
-<div  id='write'  class = 'is-mac'><h2><a name="irans-unique-military-structure" class="md-header-anchor"></a><span>Iran&#39;s Unique Military Structure</span></h2><p><span>Iran has a unique armed forces hierarchy - their conventional army has a lineage that extends back to the Safavid period in the early sixteenth century, counterbalanced by the Revolutionary Guard, which originated during the revolution as an ambiguous paramilitary force. The latter has gradually taken on responsibilities of the conventional military while also defending and expanding unconventional foreign operations. Both are under the complete control of the Ayatollah and clerics, establishing yet another link between Islamic authority, revolution and military command. Another offshoot, tasked with quelling internal dissent, is the </span><em><span>Basij</span></em><span>, a hybrid of auxiliary police, enforcers of moral standards, and internal security operating loosely under the direction of the Revolutionary Guard. The intertwined relationships, chains of command and ambiguous doctrine illustrate the complexity of Iran’s security establishment and demonstrate the vast challenges that the country faces in dealing with both the international community and internal dissent in protest of the regime’s autocracy. The modern transition of the Iranian military is characterized by four distinct phases: </span></p><ol start='' ><li><span>Attempt to become  “Policeman of the Gulf” in the 1970’s</span></li><li><span>Post-Revolution purge</span></li><li><span>The Iran-Iraq war, which tested and re-forged the Iranian military with a new identity </span></li><li><span>Islamically aligned and combat hardened enforcement of moral and political activity dedicated to exporting the Islamic revolutionary spirit.</span></li></ol><p><span>Iran’s attempt at rapid modernization of their armed forces between 1970 and 1979 failed due to the limited links between the military and Iranian society, as well as the misplaced emphasis on technology. Crucial work to develop sound doctrine, strategy, and continuity in the military chain-of-command was largely avoided in the midst of constantly shifting power dynamics. With the downfall of the Shah, the rise of Islamic </span><em><span>komitehs</span></em><span> and the beginning of the Iran-Iraq War, Iran lost many of their competent technicians and their modernized edge within the armed forces as they reverted to grassroots nationalism. That nationalism created the environment that facilitated authoritarian rule and emphasized the Basij role in quelling such events as the Green Revolution. This grassroots nationalism is embedded with revolutionary ideology that has created a broad infrastructure involved with both external and internal operations, and has blurred the lines between foreign defense and internal political suppression. These mechanisms of oppression stem directly from the rapid and dramatic transition of Iran under the Shah to the Iranian Ayatollah Khomeini.</span></p><h4><a name="iran-under-the-shah" class="md-header-anchor"></a><span>Iran Under the Shah</span></h4><p><span>As an authoritarian monarchy, Iran and the Shah grew in strategic importance in the 1940’s during WWII, when the Americans and British spent significant resources to transfer supplies to the Soviets to quell a Nazi invasion, leading to occupation in Iran by both sides. The Shah helped establish transportation and communication systems, and continued its modernization push by connecting urban regions and centralizing government administration of the country. Yet, in many ways, the relatively more efficient movement of people and ideas allowed the Soviets to help foster an independence agenda already at work in Iran to some extent amongst Azeris, Kurds and Balochis. These ethnic groups on the fringe had in the past led insurrections, but now found new support from Soviet proxies. These insurrections along the periphery of Iranian territory that had persisted for centuries revealed the inadequacies in the Shah’s defense and security establishment, and were a driving factor in the modernization of his armed forces. Over the next thirty years, the Shah would be forced to deal with the internal security issues, but would continue to keep an eye at the goal of being the regional powerhouse, with the mechanisms and equipment to achieve both aims.</span></p><h4><a name="modernization-issues" class="md-header-anchor"></a><span>Modernization Issues</span></h4><p><span>The Shah transitioned from the Anglo-Soviet occupation in the ‘40s and survived the internal political threat from Mosaddeq’s anti-imperial nationalism push with help of American and British intelligence agencies. In 1955, the Shah used the </span><em><span>Central Treaty Organization</span></em><span> (CENTO, a conglomeration of Turkey, Iraq, Pakistan and Iran) to expand its role as a regional power and requested military equipment from both the US and the Soviets.</span><sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup><span> After the Iraqi monarchy fell to Pan-Arab supporters of the Soviets, Iran found itself at the center of American Cold war strategy, and requested additional support from the United States in a 1959 bilateral defense agreement.</span><sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup><span> Yet, indicative to his future role of maximizing requests at the behest of both the Americans and Soviets, the Kennedy administration wrote in 1961 that the Shah “insists on our supporting an expensive army too large for border incidents and internal security and of no use in an all-out war.”</span><sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup></p><p><span>The events that ultimately pushed forward the massive Iranian military modernization effort came in 1971, with the formation of the </span><em><span>Organization of Petroleum Exporting Countries</span></em><span> (OPEC), thus doubling Iran’s oil revenues in less than a year due to the controlled distribution model.</span><sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup><span> In 1971 Iran had </span><span>$</span><span>885M of oil revenue, but by 1975 they had increased that to </span><span>$</span><span>17.8B, a twenty-fold increase.</span><sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup><span> Also in 1971, the British completed their withdrawal from Iran, and according to the Nixon Doctrine, the US expected the region to police itself, without direct US involvement. In light of these developments, Iran increased its defense expenditures from </span><span>$</span><span>900M to </span><span>$</span><span>9.4B, a ten-fold increase that saw the acquisition of key military equipment and the development of a new corps of competent military professionals seeking to increase Iranian influence in the region.</span><sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup></p><h4><a name="us-interests-in-iran" class="md-header-anchor"></a><span>US Interests in Iran</span></h4><p><span>The US supported the build up of the Iranian military, but failed to create sustainable models of development that could address the imbalances in Gulf security, Iran’s need to grow economically, and to provide a comprehensive, but realistic, defense of the nation. The US had a complex relationship with the region, ceding influence to the British after WWII through the 1960’s, even actively disengaging from oil production opportunities that opened up following the  Iranian coup in 1953. Yet, the fear of communism’s spread pushed the US to continually re-engage with Iran despite the British withdrawal the Nixon Doctrine’s pledge to allow all regions to support themselves. The Shah brilliantly convinced the US that their loyalty to the west was not guaranteed, and frequently bought enough military hardware from the Soviets to spur an influence battle and increased funding. Yet, the threat of the Soviets in Iran was indeed real, and later Soviet records indicate a number of plans to raise coups within Iran by influencing ethnic minorities and corrupt government officials.</span><sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup><span> While the US understood that Iran would at best be able to slow a full-scale Soviet assault, it could at least provide an additional shield and a strategic piece of land in central Asia, as well as a friendly state to patrol the Gulf and maintain order in an area that the US was otherwise disengaged.</span></p><h4><a name="policeman-of-the-gulf" class="md-header-anchor"></a><span>Policeman of the Gulf</span></h4><p><span>Despite the American </span><em><span>Twin Pillar</span></em><span> philosophy of supporting both Iran and the militarily inferior Arabs under Saudi leadership in an attempt to balance the power structure in the region, Iran held the upper hand in both negotiations due to their economic clout and geo-political position in the Cold War. Additionally, the Soviet’s support for the Iraqis and marginalized Iranian ethnicities (Kurds, Balochis, Azeris) forced the Shah towards even greater hegemony over the Gulf. The military arms acquisition concerned not just the underdeveloped Arabs at the time, but even the CIA, which created a psychological profile that described the Shah as a &quot;dangerous megalomaniac&quot;.</span><sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup><span> Despite US reluctance to get involved in the region,  Soviet growth in central Asia made Iran a viable bulwark against the spread of communism.</span></p><p><em><span>Artesh</span></em><span>, the name commonly used to refer to the Iranian Armed Forces, did have some great success in their modernization that greatly expanded in the 1970’s. They replicated the US and British model, rebuilt all of their training systems, command structure and even technical manuals off of Western standards, with direct Western assistance and advice. Their actions in the Omani counter-insurgency campaign, in which they seized and held large swathes of land in support of the Omani government, won accolades from Western advisors and conflict monitors, especially by their ability to provide a logistics network for the deployed soldiers and the incremental, but sustainable methods of advancement. However, the rapid pace of buildup caused significant issues, most importantly the lack of continuity-based leadership within the officer and non-commissioned officer corps. Untested, and increasingly partisan military leaders rose through the ranks without gaining essential experience caused ramifications that lasted through the revolution and significantly undermined the Iranian military, both in military operations and in perception amongst the Iranian public. Because such a large portion of this military buildup went towards the acquisition of highly technical equipment (aircraft, ships,  missile systems, etc.), even small disturbances amongst their specially trained technicians or replacement needs created uncontrollable ripple effects in their military. Additionally, the military was ill-equipped to address such dangers as internal dissent or small-scale skirmishes with the necessary precision and proportionality. The </span><em><span>Artesh</span></em><span> was building a military to control the Gulf and become a regional policeman, but their unbalanced growth created increasingly fatal flaws in maintaining the Iranian political-military relationship.</span></p><h4><a name="the-shahs-instability" class="md-header-anchor"></a><span>The Shah’s Instability</span></h4><p><span>The Shah’s increasing irascibility and sense of grandeur ultimately proved to be his downfall. While Cold War conflicts initially kept his military in check, the vast expansion in oil revenue and  American encouragement to maintain both a western-friendly disposition and a leadership role in the Gulf further strengthened the Shah’s desire to further modernize an externally-focused military, leaving internal issues to regional police and the gendarmerie. While the Shah may have been justified in rebuilding an aging fleet of aircraft, ships and missiles, his ultimate endeavors saw the purchase of such equipment as the F-14 with advanced avionics that even the US, developers of the equipment, had trouble incorporating into their fleet and strategic objectives. In a telling example, while the typical military might allocate 3% of their defense spending towards artillery, Iran had almost 30%, showing the disproportionate adherence towards massive strikes, but lacking the accompanying intelligence sharing and joint service operations that are necessary to use these weapons effectively.</span><sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup><span> Despite the highest accolades of the future US Chairman of the Joint Chiefs of Staff, Colin Powell, who remarked favorably at the tailored uniforms and ferocious-looking weaponry after a parade in 1978, the Iranian military in the 1970’s hid glaring inadequacies.</span><sup class='md-footnote'><a href='#dfref-footnote-10' name='ref-footnote-10'>10</a></sup></p><p><span>The Shah grew concerned at the possibility of a coup and continually shifted his officers, removing any that grew too powerful or seemed to wield too much influence amongst the troops. This lack of continuity did not allow commanders to create and undertake long-term visions for their units, or gain the personal connections that are needed to both fully understand the unit’s mission and implement necessary change. Using SAVAK and his own internal security team, he monitored and limited contact between military commanders to ensure they did not form alliances or build power bases, which obviously debilitated essential communication. Additionally, Iranian technical talent could not develop at the intense rate of acquisition, forcing them to rely on American maintainers and technicians, as well as American factories for part replacement. Finally, because the Shah eventually promoted a small set of sycophants to the highest positions rather than truly competent officers, the links between the Shah and the bulk of the military were strained. He specifically acted against military involvement with politics and conscripts were isolated from civilian society, which perceived the military as aloof and unreliable.</span></p><h4><a name="shah-downfall" class="md-header-anchor"></a><span>Shah Downfall</span></h4><p><span>The Artesh largely focused on external security and patrolling the Gulf, most notably in defense of Iraqi raids along the Shatt al-Arab waterway that brought both countries’ armies to full-mobilization along the border in 1969 and again in 1971. Meanwhile, the situation on the domestic front was quickly becoming untenable. Through the &#39;60’s and &#39;70s, the Shah’s violently quelled dissent amongst ethnic minorities and tribal chiefs, such as the Qashqai and Bakhtiari. While this created short periods of quiet, it also fomented a new degree of underground political activism along the fringes of Iranian territory and myriad new skirmishes between militants and gendarmeries. Within the urban areas, the widespread suppression of the Left and Islamists overreached, unwittingly strengthening support and sympathy for both groups. For instance, when the Shah ordered the arrest of Ayatollah Ruhollah Khomeini in 1963, Tehran was engulfed in three days of violent protests, with over three hundred killed and several hundred wounded. This demonstrated the lack of training and preparedness of both the gendarmerie and the military, which stepped in with lethal weaponry and brutal tactics in what could otherwise have been a limited protest that ebbed, thus beginning a series of protest escalations over the next fifteen years which set the stage for further violence in domestic affairs.</span></p><p><span>In 1978, protests by Islamists picked up while the Shah focused on external threats and Leftist guerrilla groups simultaneously carried out bombings and assassinations within Iran. The </span><em><span>Mujahedin-e-Khalq</span></em><span> (MEK), the militant arm of the Tudeh Leftist party, was perhaps the most powerful of these groups and successfully carried out bank robberies to fund their activities. Because of the assassination of eight American military advisors and contractors between 1973-1976, there was US pressure on the Shah to suppress the Leftist groups, which is perhaps why he ignored the rise of the populist Islamic parties calling for his overthrow. By May of 1977, Iran’s oil revenue plummeted, forcing millions into unemployment and into the hands of populist leaders that were able to take advantage of this economic turn, especially the mullahs. As the exiled Khomeini and his supporters in Iran organized protests through 1978, the Shah had simultaneously lost support from virtually all segments of society through his autocratic style and focus on external threats that were of no benefit to the average Iranian.</span></p><p><span>Ayatollah Khomeini understood the importance of neutralizing military intervention in the protests, and his followers fostered personal relationships with the conscripts while isolating leadership from their own troops. They applied pressure to conscripts’ families and recruited  others to spread revolutionary literature, both on the Left and with the Islamists. They called on the conscripts to honor their religious obligations in deserting the military, and promised positions within the revolution should they abandon their posts. When, in a January 1978 newspaper editorial, the government blamed the rise in violence on Islamic extremists without accepting a role in the escalation, protests broke out. Two mullahs were shot by troops, and their turbans were displayed as symbols of the bloody repression of the common Iranian. Protests quickly spread to Tabriz and Tehran, where the Shah sent paratroopers to arrest student leaders at the university. When the initially neutral and moderate Ayatollah Muhammad Kazim Shariat-Madari was wounded, he actively joined the opposition and brought along his numerous followers, who subsequently brought along members of his mosque network, creating an immediate change in the dynamics and balance of power. The Shah responded by firing General Nassiri and over thirty officers of SAVAK, the very same team that would have provided intelligence the Shah needed in understanding the nature of the protests.</span><sup class='md-footnote'><a href='#dfref-footnote-11' name='ref-footnote-11'>11</a></sup><span> Not only did this action dismember an essential agency and demoralize the rest of its agents, but the move also showed the Shah to be weak and indecisive for giving in.</span></p><p><span>After Islamic militants locked the Cinema Rex movie theater and set it on fire, killing four hundred moviegoers, the carnage was incorrectly blamed on the government and disillusioned SAVAK agents. Marches grew into the hundreds of thousands and the Shah responded by firing even more officers, releasing prisoners and attempting to negotiat. Again, the protestors saw the Shah as weak and when orders of martial law in Jaleh were not adequately communicated to the public, troops killed over two hundred citizens on what is now called “Black Friday.”</span><sup class='md-footnote'><a href='#dfref-footnote-12' name='ref-footnote-12'>12</a></sup><span> This series of protests escalated beyond the control of the government and the Shah’s responses undermined his own agencies with no gain - the Shah was out of touch with reality which opened up many opportunities for the revolutionaries to exploit.</span></p><h4><a name="ayatollah-khomeinis-return" class="md-header-anchor"></a><span>Ayatollah Khomeini’s Return</span></h4><p><span>The final events of the Shah’s rule occurred when military commanders refused to intervene in a student revolution in Tehran in November of 1978, and a full retreat from other engagements followed. The Shah appointed the indecisive General Azhari as Prime Minister, which further disengaged the military, and officers were unable to deal an astronomical desertion rate of over a  thousand enlisted troops per day.</span><sup class='md-footnote'><a href='#dfref-footnote-13' name='ref-footnote-13'>13</a></sup><span> Last-ditch efforts to censor publications, close universities and put military vehicles (including tanks) in the streets simply agitated more people, and PM Azhari resigned after a heart attack, leaving no government hierarchy. The Americans, in a last-ditch effort, sent General Robert Huyser to Iran in an attempt to rehabilitate the military and rebuild a semblance of a command structure.</span><sup class='md-footnote'><a href='#dfref-footnote-14' name='ref-footnote-14'>14</a></sup><span> Yet, </span><em><span>Artesh</span></em><span> showed almost no initiative in creating a contingency plan, instead relying on the hope that America would conduct a full-scale intervention, and refused to act without specific Shah approval. As Stephen Ward writes, “The generals wanted Huyser to tell them what to do, the Shah came to believe that the American general was responsible for arranging a deal between the revolutionaries and the military to end the monarchy, and the revolutionaries were convinced Huyser was in Iran to promote a coup.”</span><sup class='md-footnote'><a href='#dfref-footnote-15' name='ref-footnote-15'>15</a></sup><span> In a telling foreshadowing, Huyser warned the military that they would be the first to be purged in a new regime, and many of them were indeed executed in the coming years.</span></p><p><span>Upon Khomeini’s return, many of the generals assumed that they were immune from punishment due to their influence and expertise, and expected to be taken into counsel for the transition period post-revolution. However, the rank structure and the relationship between the revolutionaries and the military was in chaos. Almost immediately, Islamic groups, including a sizable number that had earlier been in the military, formed </span><em><span>kohmitehs</span></em><span>, and began enforcing Islamic law, as well as holding trials of those involved in the earlier repression of the revolution. Many of these groups were not under Khomeini’s control, and the lack of continuity created an anarchic security situation. In May, Khomeini established the </span><em><span>Sepah-e-Pasdaran-e Equlab-e Eslami</span></em><span>, otherwise known as the Islamic Revolutionary Guard Corps, the paramilitary establishment that would change the direction of Iran’s armed forces.</span><sup class='md-footnote'><a href='#dfref-footnote-16' name='ref-footnote-16'>16</a></sup><span> With the intent to build a parallel military to eventually take command of the conventional military, the Guard recruited Islamic-minded individuals and consolidated many of the </span><em><span>kohmitehs</span></em><span> and Islamic militant groups to enforce domestic order. Khomeini saw this as an opportunity to put numerous militant and rival Islamic groups under his control, but the decision to allow them leeway in enforcing social order and morality would have dire consequences for large swathes of urban Iran. In a strategic move, he would allow the </span><em><span>kohmitehs</span></em><span> to follow through with the more difficult missions and those with social implications, such as morality oversight, and then depending on the result either take credit for the action or denounce the individual </span><em><span>kohmitehs</span></em><span>. By 1983, most </span><em><span>kohmitehs</span></em><span> were under Khomeini’s command, while the rest were purged along with the Leftists.</span></p><p><span>The military remained the prime target for revolutionary reprisals, and all bases were monitored by Guard, and later Basij, units to ensure there were no unauthorized movements. Over four hundred generals and senior security officers were executed in the first six months of the revolution, with untold numbers arrested, imprisoned or disappeared.</span><sup class='md-footnote'><a href='#dfref-footnote-17' name='ref-footnote-17'>17</a></sup><span> Much of this involved personal vendettas and posturing for future promotions, and the military itself saw over 250,000 desertions of members unwilling to chance being caught in the deadly purge. To compensate for the loss of manpower, recruitment for both Artesh and the Guard accelerated in poor rural areas, and Khomeini-aligned clerics ensured a thoroughly Islamic education system for the military. Virtually all soldiers with essential technical skills were put into remedial morality training based on Islamic primacy, along with an endless cycle of committees to redefine the military. Only on the eve of the Iraq war did the purges end, especially when the new government understood that the technical experts on weapon systems and tactics that were about to be used had largely left Iran or resigned. Khomeini attempted to quell the purges, offering full amnesty to military members and broadcast sermons forgiving the military, but the damage to </span><em><span>Artesh</span></em><span> was done.</span></p><p><span>By the mid-1980’s, the Guard had over twenty-five thousand dedicated members with approximately 100,000 in reserve.</span><sup class='md-footnote'><a href='#dfref-footnote-18' name='ref-footnote-18'>18</a></sup><span> However, their tactical training was very limited, mostly dealing with small-scale repression of political groups, but no training in warfare. In conjunction with the purge of </span><em><span>Artesh</span></em><span>, Iran lacked the ability to adequately operate within the region militarily, and Khomeini put a disproportionate amount of time redefining the military and its objectives in Islamic terms, rather than preparing for modern warfare engagements. He created a Political-Ideological Directorate under the Ministry of Defense, consisting of clerics that were present down to the platoon level to provide Islamic guidance in any military operations and evaluate the Islamic observance of individual members. These intermediaries caused a serious deterioration in interpersonal relations, as trust within the ranks broke down.</span><sup class='md-footnote'><a href='#dfref-footnote-19' name='ref-footnote-19'>19</a></sup><span> Simultaneously, while the military was losing its operational potential, threats were growing along Iran’s periphery, with autonomy movements again reviving amongst Kurds, Balochis and Arabs. The military attempted to intervene, but was in disarray - many platoons refused to deploy or fire on protestors, while others responded with an inordinate amount of lethal force. Iraq, seeing an opportunity, began arming Kurdish groups and sending money and trainers into Iran to weaken and divert their attention from the major oil fields and waterways in the south. In August 1979, the Guard disregarded </span><em><span>Artesh</span></em><span> advice and unilaterally went on the offense in the Kurdish town of Paveh, where they were completely destroyed.</span><sup class='md-footnote'><a href='#dfref-footnote-20' name='ref-footnote-20'>20</a></sup><span> Khomeini had to convince </span><em><span>Artesh</span></em><span> to suppress the rebels, but </span><em><span>Artesh</span></em><span> remained reluctant to involve itself in domestic situations. The Guard continued to suppress the growing revolutions, at some points having to work on six different major protests at a time, including those by militant Leftist groups in urban centers.</span></p><p><span>While ethnic protests were spreading, the Leftist movement was fighting amongst itself, putting all their emphasis on purging the military and advocating an anti-capitalism and anti-imperial political platform. Tudeh, the major Leftist group, fully participated in purges of fellow Leftist groups, and coordinated actions with the clerics to eradicate competition. Khomeini pursued the strategy of allowing Tudeh to destroy their own competitors, one by one; he then turned against Tudeh in 1982, executing over 1800 Tudeh members in three months. The Guards’ role in these activities was paramount, and would pave the way for later actions in quelling dissent by using inordinate violence and executions to terrorize the population. By late 1980, at least ten thousand Iranians were executed by </span><em><span>kohmitehs</span></em><span>, a half million emigrated from Iran, and Khomeini was at a low of popularity, having reneged on almost all deals with revolution coalition members.</span><sup class='md-footnote'><a href='#dfref-footnote-21' name='ref-footnote-21'>21</a></sup></p><h4><a name="iran-iraq-war" class="md-header-anchor"></a><span>Iran-Iraq War</span></h4><p><span>Khomeini would have likely lost control of the revolution had it not been for Iraq’s entry into Iran and the beginning of a decade-long war that caused massive casualties and zero change in territory. While Saddam Hussein saw an utterly weakened Iran with a revolutionary leader at a nadir of support, Khomeini used the initiation of war to reassert Iranian nationalism. When Iraq invaded in September of 1980, Iran’s defense capability was virtually non-existent. Between 40-60% of the military from 1979 was no longer present, and with the cessation of relations with the US, over half of the equipment that they had purchased over the past decade no longer worked, a trend that would only worsen as the US refused to replace parts and Iran no longer had the technical expertise to maintain the equipment.</span><sup class='md-footnote'><a href='#dfref-footnote-22' name='ref-footnote-22'>22</a></sup><span> While Iraq saw a quick war as a way to achieve their objectives in humiliating their Shi’ite neighbor and seize important oil facilities along Iran’s western coast, Iran played a large role in exacerbating tensions. The Guard attempted to assassinate Tariq Aziz, an officer in Saddam Hussein’s inner ring, and armed clashes erupted along the border following an Iraqi attack on the Iranian embassy in London.</span></p><p><span>While Artesh was barely functioning and the Guard was focused on internal issues, there were virtually no functioning entities able to defend the borders against a full-scale incursion. Immediately, the Guard put their limited resources into recruiting entire swathes of the population and providing them with quick, two-week indoctrination and small-arms courses before sending them to the front lines. Advanced training came to a standstill, and even tank commanders admitted that tank warfare was taught only in a classroom; combat was the first time most of the recruits could practice even the simplest tactics.</span><sup class='md-footnote'><a href='#dfref-footnote-23' name='ref-footnote-23'>23</a></sup><span> As the Guard could not adequately address the crisis, segments of </span><em><span>Artesh</span></em><span> regrouped and gained enough autonomy to mobilize and make decisions without political approval. Their ability to counter the Iraqi invasion gained them an entirely new level of trust from Khomeini. The purging of Shah officers over the previous year, in addition to a gradual Islamization of the force, impressed upon Iran that there was still a need for a conventional force relatively removed from the political, religious and economic constraints of the revolution.</span></p><p><span>While Artesh focused on coordinating military action and rebuilding their combat power, the Guard continued their recruitment of </span><em><span>Pasdaran</span></em><span> (Guardians), reaching 250,000 by 1985.</span><sup class='md-footnote'><a href='#dfref-footnote-24' name='ref-footnote-24'>24</a></sup><span> Yet, despite the escalation in numbers, they did not have enough weaponry, even basic small arms, to equip their men. Additionally, Khomeini established the Basij in 1979 with the intent of creating an internal, auxiliary police force focused solely on domestic issues that fell under the Guard’s command structure. The quick escalation of the invasion and the need to bring more people to the front, no matter their capabilities, established an Islamic martyrdom system that would prove crucial to the war effort. This intense ideological indoctrination system, geared towards poor, rural Iranians that were ethnically Persian, truly convinced men to sacrifice their bodies for the revolution. While many were told fabrications about the state of combat and the risks involved, a significant number joined the war effort knowing full well the dire situation. Raids and offensives would typically involve unarmed Basiji on the backside of any raid in order to pick up the weapons of enemies or fellow Iranians that died on the battlefield. Additionally, the concepts of </span><em><span>jihad</span></em><span> and the goal of martyrdom became the premier ideological tool in creating a fundamentalist mentality that created an environment promoting heroic, but costly, actions on the battlefield. Indoctrination took place throughout the country, beginning at the earliest stages of education and ensuring that an entire generation of Iranians would be radicalized by warfare, Islamic fundamentalism and revolutionary spirit.</span></p><p><span>While a conventional war raged between Iraq and Iran, Khomeini made an effort to use his Guard and Basij members to create instability throughout the region, pushing the revolutionary mandate across the region. The Guard’s new role in fomenting insurrections, conducting assassinations and undermining regional stability is a theme of Iranian revolutionaries that has continued to this day. Khomeini standardized irregular warfare with the creation of the Quds force, another Guard-controlled entity focused on covert foreign warfare, and further solidifying the clerics’ rule over foreign diplomacy. Because the command structure allows for the movement of these operators to engage in both external and internal issues, many of the most violent means used in warfare were subsequently copied and utilized in quelling internal dissent. In perhaps the best example, Khomeini recruited, trained and financed Hezbollah, the group which still operates in Southern Lebanon and has played a major role in Israeli consciousness. Iran’s ability to build support for Islamic ideals and revolutionary spirit at the grassroots level has allowed Iran to operate effectively at the societal level despite their inability to make breakthroughs at the conventional level.</span></p><h4><a name="overall-effects-of-iraq-iran-war" class="md-header-anchor"></a><span>Overall effects of Iraq-Iran War</span></h4><p><span>The Iraqi leaders that prosecuted this war were politicized and unqualified, but possessed firepower and the support of many outside nations. Iran, on the other hand, had a mass of advanced weaponry that was largely unworkable and unfixable, a military that contained very little of the technical expertise it had just two years before, and was in a bloody transition period. However, the Iraqis did not factor in the quickness with which Khomeini was able to instill Revolutionary jihad and gather a large number of citizens willing to go to the front, where they took extremely heavy casualties. These martyrs were successful in bringing the war into a virtual stalemate, however catastrophic the losses were. Iran had approximately 220,000 battlefield deaths, over 40% of which were the uneducated, lightly armed but zealously Islamic Basijis, who would later use their talents in working for the regime to quell dissent and become the face of combat-hardened veterans moving towards internal social issues.</span><sup class='md-footnote'><a href='#dfref-footnote-25' name='ref-footnote-25'>25</a></sup><span> While </span><em><span>Artesh</span></em><span> played a major role in fighting and coordinating in defense of Iran, Khomeini put his efforts into building a paramilitary Revolutionary Guard that could occupy military issues as well as keep an eye on the social issues while controlled by the Shi’ite clerical class of Iran. By the end of the decade-long conflict, Iranian society was devastated and tired of warfare, cowed into accepting Khomeini’s rule, and sapped of secessionist or neo-revolutionary action. Combined with this new force dedicated towards internal political suppression, the clerics had their perfect opportunity to fully assert their authority and build Iran according to the fundamental Shiite ideals.</span></p><h4><a name="psychology-of-basij" class="md-header-anchor"></a><span>Psychology of Basij</span></h4><p><span>In any armed conflict, there is a psychological impact on both the soldiers and citizens. The Iranian war generation suffered from the same effects of trauma as other nations, and in many ways the rigid ideological pronouncements and political suppression simply exacerbated an already tense situation. The effect of censored television and radio broadcasts throughout Iran stressed a life of martyrdom, sacrifice, political unity and Islam that held uncompromising views on debate and diversity. As Khomeini and the clerics continued to propagate their own message to Iran, they continued their fight on both the foreign and domestic front, simultaneously holding off Iraqi incursions and violently quelling dissent amongst the Kurds, Arabs and Balochis. Khomeini wanted to win the war, but was also heavily engaged in ensuring that any post-war political environment would be to his advantage. On some level, the ‘imposed’ war benefitted the revolution by giving an extended period in which he could solidify his rule and quell domestic dissent through an established national crisis.</span></p><p><span>Saddam understood the tenuous nature of Iran’s post-revolution military, and his timing of the invasion looked to take advantage of the chaos. The initial Iranian defense force was a hodgepodge of cobbled together entities: </span><em><span>Artesh</span></em><span> (the conventional military), the fledgling Iranian Revolutionary guard, the Basij, remnants of SAVAK and the Ministry of Interior Intelligence, and elements of informal </span><em><span>kohmitehs</span></em><span> that did not have an official relationship with the government but engaged in some limited defensive operations. However, the devastating impact of the initial fighting and the subsequent stalemate and border hostilities resembling trench warfare encouraged the regime to expand their recruitment, focusing mainly on the religious rural areas that would go on to populate the bulk of the Basij and take the brunt of the casualties in the war.</span></p><p><span>Iran had a draft system in place, but there was little to no enforcement. The peer-based volunteer system was not as effective in the urban populations, where there was diversity in opinion and mindset, and a significant enough population of anti-war activists. Yet, despite the large numbers of casualties, only a small portion of Iran actually participated directly in the war. It is estimated that there were between 1.5 and 3 million soldiers participating in operations through the duration of the war, yet over 9 million men between the ages of 15 and 35 were available during that same timeframe.</span><sup class='md-footnote'><a href='#dfref-footnote-26' name='ref-footnote-26'>26</a></sup><span> Compared to other instances of total war, this percentage of population is staggeringly small and illustrates a desire to control the future political environment and course of war, infusing sacrifice, martyrdom and Islam into the dialogue. When conventional military tactics could do no more than maintain a stalemate, Iran turned to a volunteer system that highlighted rural respectability and guerilla warfare and stressed Islamic  martyrdom over tactics, weaponry or strategy.</span></p><p><span>Animosity grew unabated between the rural and urban populations based on their percieved sacrifices, and Khomeini worked to undermine leftist and secular groups by disseminating information to the front-line volunteers, whether true or not, that these groups were actively treasonous and working with Iraqis to destroy Iran. Iranian draft dodgers and those not willing to volunteer further isolated themselves from a rural population that was making significant sacrifices. Because the Basij education that now encompassed most of Iran obsessed over Islamic sacrifice, the national narrative was furthering the chasm between Iranian society based on taking action in the war.</span></p><p><span>Once the war ended, political dialogue quickly changed as new president Khatami discussed the dire need to address other issues, especially the devastated infrastructure and economics of the country after ten years of destruction. In a telling confrontation, President Khatami answered criticism of why political rallies had “dancing and celebrations”, with “excessive freedom given to young women and men in order to remain loved by people.”</span><sup class='md-footnote'><a href='#dfref-footnote-27' name='ref-footnote-27'>27</a></sup><span> Despite the need to address financial and social issues, veterans largely viewed the change in dialogue as a danger to the status quo, and their importance diminished as they went from saviors and defenders of Iran to recipients of medical assistance and pensions. Veterans viewed youths that strived for western values, such as democracy and social freedom, as un-Islamic and enemies of Iran while the youth viewed the veteran dialogue of sacrifice as a means to suppress progress and development. Some of the urban elites that were now driving the economic recovery viewed the veterans as drains on the economy, with little skills to add to the nation. This separation of ideals created a hierarchy of  societal involvement, which would grow in importance when the war ended and the Basij took over domestic political operations.</span></p><h4><a name="basij-relation-with-guard" class="md-header-anchor"></a><span>Basij Relation with Guard</span></h4><p><span>The Basij are directly under the Guard (IRGC) in the chain-of-command and are trained, organized and deployed under the Guard&#39;s leadership. War veterans dominate the higher echelons of leadership, although there is a generation gap as newer members are youth that have also emerged fully indoctrinated under the martyrdom ideology. They are ill equipped, and the vast majority of the training is based on Islamic ideology, with limited tactics and limited influence in strategic or doctrinal issues. In the Iran-Iraq War, the Basij was involved in almost all of the martyrdom operations, including rushing Iraqi defensive positions without weaponry. However, when the war ended, there were initially no obvious uses for the Basij, which cost money to maintain, and while sizable, would have little impact in any future conventional engagements with regional enemies. Reaching a nadir of influence in 1990 as their usefulness diminished, the clerics and IRGC saw their potential as a reserve domestic force that could quickly mobilize and deploy to domestic hot spots and complete basic functions, such as riot control, urban surveillance and arrests. In general, the Basij were the enforcers of authority created and organized by the clerics and their IRGC proxies. Because they have a relatively small active component of 90,000, the Basij is modeled after a broad social organization that deploys mainly in regional domestic operations, with the aim of total social engagement in revolutionary affairs. In the 151</span><sup><span>st</span></sup><span> article of the 1979 Iranian constitution, Khomeini worked to ensure that</span></p><blockquote><p><span>The government is obliged to provide a program of military training, with all requisite facilities, for all its citizens, in accordance with the Islamic criteria, in such a way that all citizens will always be able to engage in the armed defense of the Islamic Republic of Iran. The possession of arms, however, requires the granting of permission by the competent authorities.</span><sup class='md-footnote'><a href='#dfref-footnote-28' name='ref-footnote-28'>28</a></sup></p></blockquote><p><span>Iranian Parliament further defined the role of the Basij with a four point agenda: homeland defense against foreign aggression, “Protecting the Revolution and its achievements by countering internal enemies,” participating in disaster relief and maintaining the moral order of the country.</span><sup class='md-footnote'><a href='#dfref-footnote-29' name='ref-footnote-29'>29</a></sup><span> While the Iran-Iraq war quickly found a purpose for a broad swath of the population to involve themselves in a dangerous war of attrition that relied on manpower, the Basij fit perfectly within the construct of the revolution. When the war ended, however, the clerics were at a loss as to how the Basij could reincorporate with civilian life and not become a drain on an overloaded economy. The low-cost training, small active component and quick deployment of reserves are essential to understanding the Basij.</span></p><p><span>To illustrate the spirit of the Basij with statistics, or at least the intent of the numbers, Basij commander Hossein Ta’eb claimed to have 13.6 million Basij participants in 2008, approximately 20% of the entire population of Iran. However, of these, 5 million were women and 4.7 million were children, and of the four million remaining there is likely a sizable number of elderly, injured and youth, bringing the estimate of actual Basij operators to 1.5 million.</span><sup class='md-footnote'><a href='#dfref-footnote-30' name='ref-footnote-30'>30</a></sup><span> Furthermore, interviews with Basij indicated some level of indifference to government policies, but rather intent to achieve social mobility. Peter Martonosi refers to one twenty-five year old Basij member who reasoned, “The only reason I stay in the Basij is for the money, but many of my friends in the Basij are unhappy with the government.”</span><sup class='md-footnote'><a href='#dfref-footnote-31' name='ref-footnote-31'>31</a></sup><span> It is unknown how large the effective portion of the Basij is, and it is even harder to determine how many of them are truly loyal to the regime; however, the core of war veterans which now make up the upper echelons of the organization have created an environment that indicates a deep following of clerical policy and devout Islam, and have illustrated their resolve in the student protests of 1999 and the Green revolution of 2009.</span></p><p><span>In addition to the reserve police components, the Basij have expanded into dominant positions in business, agriculture, and even education, which is ironic given that they led the academic purge of the early 1980s. They created the Lecturers Basij Organization in universities, enrolling 15,000, or over 25% of higher-level academia, and ensured career progression assistance for its members.</span><sup class='md-footnote'><a href='#dfref-footnote-32' name='ref-footnote-32'>32</a></sup><span> All members had to subscribe and promote their subject under the guise of Islam, and more specifically Islam with a revolutionary perspective, to influence the coming generation of college educated young adults. Combined with the 650,000 students enrolled in the Student Basij Organization, the impact they have on education is profound. Recent events have seen the purging of secular curriculum and professors and the infusion of Islamic ideology into virtually all subjects through the secondary level. Even at the youngest levels, the Basij run nation-wide camps directed towards elementary school children, instructing the tenets on the same sort of Islamic curriculum that they would find in later years.</span><sup class='md-footnote'><a href='#dfref-footnote-33' name='ref-footnote-33'>33</a></sup><span> The Basij, as a direct liaison for the IRGC, and thus the clerics, are the small-unit mobilizers of action within society, and while not necessarily involved in the shaping of Iranian doctrine (which is done by the clerics and Ayatollah), are indispensable in executing the orders from the top levels.</span></p><h4><a name="conclusion" class="md-header-anchor"></a><span>Conclusion</span></h4><p><span>It is difficult to fully understand the impact that the revolution has had on the nation of Iran, and there are discussions taking place even amongst themselves as to where the nation is heading, and whether the revolutionary ardor is still relevant in today’s environment. In the years leading up to the revolution, perhaps the most important component was the Shah’s modernization and arming of the military. Ironically, while the infrastructure developments were necessary and the arming of the military could have paid dividends had it been combined with rational policies of military chain of command and political developments, it ultimately failed because of the suppression of dissent and autocratic disconnect with economic and societal needs. Additionally, the perception that technology and progress could not sustain a society drove the revolution, and would provide the future ideological standards with the onset of the Iran-Iraq war. The military weaponry that would have been effective in combat was useless due to lack of maintenance and parts replacement, while Iranian martyrdom and Islamic ideology at some level defended against Iraqi aggression. Instead, the revolution incurred massive casualties and destruction to society as resources were deployed to war rather than building infrastructure or the economy. The revolution equated Westernization directly with the failed policies of the Shah; the pendulum swing in the other direction created a society that stifled dissent and would experience full-scale purges of everything from academia to government and military.</span></p><p><span>The Iran-Iraq war created a generation of veterans that were infused with the concept of martyrdom, sacrifice and Islam, and would go on to form the next generation of leaders in society. However, the vast majority of the volunteers, who also took the majority of the casualties during the war, were the Basij militias, who did not necessarily have leadership abilities beyond the small unit. These typically conservative, religious individuals hit a nadir of influence directly after the war, but found their political niche in supporting the regime with their quick deployments with large numbers of people capable of quelling internal dissent. As seen in the 1999 student revolution, and more recently in the Green revolution, the Basij have found their political power by enforcing moral standardization in a revolutionary and Islamic context and supporting the regime in a low-cost model, which greatly enhances clerical reach to all segments of Iranian society. The animosity the older Basij have towards the ‘urban elite’, whether based upon justified grievances or not, has fueled violent quelling of domestic political unrest, and illustrates the remnants of the Iran-Iraq war.</span></p><p>&nbsp;</p><p>&nbsp;</p><div class='footnotes-area'  ><hr/>
-<div class='footnote-line'><span class='md-fn-count'>1</span> <span>Steven Ward, </span><em><span>Immortal: A Military History of Iran and its Armed Forces</span></em><span> (Washington: Georgetown University Press, 2009), 192.</span> <a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>2</span> <span>Kajendra Singh, </span><em><span>Iran: Quest for Security</span></em><span> (New Delhi: Vikas Press, 1980), 65.</span> <a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>3</span> <span>Ruhollah K. Ramazani, </span><em><span>Iran’s Foreign Policy, 1941-1973: A Study of Foreign Policy in Modernizing Nations</span></em><span> (Charlottesville: University Press of Virginia, 1975), 360.</span> <a name='dfref-footnote-3' href='#ref-footnote-3' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>4</span> <span>Ward, 193.</span> <a name='dfref-footnote-4' href='#ref-footnote-4' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>5</span> <span>Ward, 193.</span> <a name='dfref-footnote-5' href='#ref-footnote-5' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>6</span> <span>Gholamali Chegnizadeh, “Persian Military Modernization, 1921-1979” (Bradford: University of Bradford), 1997), 303.</span> <a name='dfref-footnote-6' href='#ref-footnote-6' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>7</span> <span>James Clark, </span><em><span>On the Cold War, And the Crisis in Azerbaijan of March 1946</span></em><span> (Modern Orient: V23, N3, 2004), 557-559.</span> <a name='dfref-footnote-7' href='#ref-footnote-7' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>8</span> <span>Michael Palmer, </span><em><span>Guardians of the Gulf: A History of America’s Expanding Role in the Persian Gulf, 1833-1992</span></em><span> (New York: Avon Books, 1991), 90.</span> <a name='dfref-footnote-8' href='#ref-footnote-8' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>9</span> <span>Ward, 196.</span> <a name='dfref-footnote-9' href='#ref-footnote-9' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>10</span> <span>Colin Powell, </span><em><span>My American Journey</span></em><span> (New York: Random House, 1995), 240-242.</span> <a name='dfref-footnote-10' href='#ref-footnote-10' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>11</span> <span>Shaul Bakhash, </span><em><span>The Reign of the Ayatollah</span></em><span> (London: IB Tauris &amp; Co, 1985), 14-16.</span> <a name='dfref-footnote-11' href='#ref-footnote-11' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>12</span> <span>John Stempel, </span><em><span>Inside the Iranian Revolution</span></em><span> (Bloomington: Indiana University Press, 1981), 133.</span> <a name='dfref-footnote-12' href='#ref-footnote-12' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>13</span> <span>Stempel, 134.</span> <a name='dfref-footnote-13' href='#ref-footnote-13' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>14</span> <span>Stempel, 134.</span> <a name='dfref-footnote-14' href='#ref-footnote-14' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>15</span> <span>Ward, 221.</span> <a name='dfref-footnote-15' href='#ref-footnote-15' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>16</span> <span>Sepehr Zabih, </span><em><span>The Iranian Military in Revolution and War</span></em><span> (London: Routledge, 1988), 42.</span> <a name='dfref-footnote-16' href='#ref-footnote-16' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>17</span> <span>Nikola Schahgaldian, </span><em><span>Iranian Military Under the Islamic Republic</span></em><span> (Santa Monica: RAND Corporation, 1987), 26-27.</span> <a name='dfref-footnote-17' href='#ref-footnote-17' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>18</span> <span>Schahgaldian, 28.</span> <a name='dfref-footnote-18' href='#ref-footnote-18' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>19</span> <span>Zabih, 123-125.</span> <a name='dfref-footnote-19' href='#ref-footnote-19' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>20</span> <span>“Kurds Said to Repel 400 Iranian Troops from Rebel Center,” </span><em><span>New York Times</span></em><span>, 3 Sept 1979.</span> <a name='dfref-footnote-20' href='#ref-footnote-20' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>21</span> <span>Ward, 241.</span> <a name='dfref-footnote-21' href='#ref-footnote-21' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>22</span> <span>Mark Roberts, </span><em><span>Khomeini’s Incorporation of the Iranian Military</span></em><span> (Washington DC: National Defense University, 1996), 51.</span> <a name='dfref-footnote-22' href='#ref-footnote-22' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>23</span> <span>Ward, 241-243.</span> <a name='dfref-footnote-23' href='#ref-footnote-23' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>24</span> <span>Kenneth Katzman, </span><em><span>The Warriors of Islam: Iran’s Revolutionary Guard</span></em><span> (Boulder, CO: Westview Press, 1993), 221.</span> <a name='dfref-footnote-24' href='#ref-footnote-24' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>25</span> <span>Neguin Yavari, “National, Ethnic and Sectarian Issues in the War,” </span><em><span>Iranian Perspectives on the Iran-Iraq War</span></em><span>, edited by Farhang Rajaee (Gainesville: University of Florida Press, 1997), 84.</span> <a name='dfref-footnote-25' href='#ref-footnote-25' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>26</span> <span>Farideh Farhi, “The Antinomies of Iran’s War Generation,” </span><em><span>Iran, Iraq and the Legacies of War</span></em><span> (New York: Palgrave, 2004), 105.</span> <a name='dfref-footnote-26' href='#ref-footnote-26' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>27</span> <span>Farhi, 102.</span> <a name='dfref-footnote-27' href='#ref-footnote-27' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>28</span> <em><span>Article 151</span></em><span>. Constitution of the Islamic Republic of Iran.</span> <a name='dfref-footnote-28' href='#ref-footnote-28' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>29</span> <span>“Niruyeh Moghavemat Basij,” </span><em><span>Global Security Intelligence</span></em><span>, March 2013. </span>&lt;<a href='http://www.globalsecurity.org/intell/world/iran/basij.htm&amp;gt;' target='_blank' class='url'>http://www.globalsecurity.org/intell/world/iran/basij.htm&gt;</a> <a name='dfref-footnote-29' href='#ref-footnote-29' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>30</span> <span>“The Rise of the Pasdaran,” RAND National Defense Research Institute (Santa Monica, 2009), 46.</span> <a name='dfref-footnote-30' href='#ref-footnote-30' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>31</span> <span>Peter Martonosi, “The Basij, A Major Factor in Iranian Security” National University of Public Service, Budapest, Hungary AARMS (V11, N1, 20012), 14.</span> <a name='dfref-footnote-31' href='#ref-footnote-31' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>32</span> <span>“Rise of the Pasdaran,” 39.</span> <a name='dfref-footnote-32' href='#ref-footnote-32' title='back to document' class='reversefootnote' >↩</a></div>
-<div class='footnote-line'><span class='md-fn-count'>33</span> <span>“Rise of the Pasdaran,” 38-40.</span> <a name='dfref-footnote-33' href='#ref-footnote-33' title='back to document' class='reversefootnote' >↩</a></div></div></div>
+</head>
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../../js/scripts.js"></script>
+<script>document.body.className += 'fade-out';</script>
+	
+<body>
+	
+	<div class="container">
+  		<div class="row">
+    	<div class="twelve columns" style="margin-top: 1%" align = "right"> 
+			<a href= "../../index.html"> 
+				<img src="../../images/LozTextLogo.jpg" alt="Loz Logo" align = "left" style="width:90px;height:100px;"> </a> 
+			<a class="button" href="../projects.html">Projects</a> 
+			<a class="button" href="../writing.html">Writing</a> 
+			<a class="button" href="../dataSci.html">Data Science</a> 
+			<a class="button" href="../about.html">About Us</a> 
+		</div>
+	  
+	  <h2>Iran&#39;s Unique Military Structure</h2>
+
+	  <p>Iran has a unique armed forces hierarchy - their conventional army has a lineage that extends back to the Safavid period in the early sixteenth century, counterbalanced by the Revolutionary Guard, which originated during the revolution as an ambiguous paramilitary force. The latter has gradually taken on responsibilities of the conventional military while also defending and expanding unconventional foreign operations. Both are under the complete control of the Ayatollah and clerics, establishing yet another link between Islamic authority, revolution and military command. Another offshoot, tasked with quelling internal dissent, is the <em>Basij</em>, a hybrid of auxiliary police, enforcers of moral standards, and internal security operating loosely under the direction of the Revolutionary Guard. The intertwined relationships, chains of command and ambiguous doctrine illustrate the complexity of Iran’s security establishment and demonstrate the vast challenges that the country faces in dealing with both the international community and internal dissent in protest of the regime’s autocracy. The modern transition of the Iranian military is characterized by four distinct phases: </p>
+
+	  <ol start=''>
+
+		  <li>Attempt to become “Policeman of the Gulf” in the 1970’s</li>
+
+		  <li>Post-Revolution purge</li>
+
+		  <li>The Iran-Iraq war, which tested and re-forged the Iranian military with a new identity </li>
+
+		  <li>Islamically aligned and combat hardened enforcement of moral and political activity dedicated to exporting the Islamic revolutionary spirit.</li>
+	  </ol>
+
+	  <p>Iran’s attempt at rapid modernization of their armed forces between 1970 and 1979 failed due to the limited links between the military and Iranian society, as well as the misplaced emphasis on technology. Crucial work to develop sound doctrine, strategy, and continuity in the military chain-of-command was largely avoided in the midst of constantly shifting power dynamics. With the downfall of the Shah, the rise of Islamic <em>komitehs</em> and the beginning of the Iran-Iraq War, Iran lost many of their competent technicians and their modernized edge within the armed forces as they reverted to grassroots nationalism. That nationalism created the environment that facilitated authoritarian rule and emphasized the Basij role in quelling such events as the Green Revolution. This grassroots nationalism is embedded with revolutionary ideology that has created a broad infrastructure involved with both external and internal operations, and has blurred the lines between foreign defense and internal political suppression. These mechanisms of oppression stem directly from the rapid and dramatic transition of Iran under the Shah to the Iranian Ayatollah Khomeini.</p>
+
+	  <h4>Iran Under the Shah</h4>
+
+	  <p>As an authoritarian monarchy, Iran and the Shah grew in strategic importance in the 1940’s during WWII, when the Americans and British spent significant resources to transfer supplies to the Soviets to quell a Nazi invasion, leading to occupation in Iran by both sides. The Shah helped establish transportation and communication systems, and continued its modernization push by connecting urban regions and centralizing government administration of the country. Yet, in many ways, the relatively more efficient movement of people and ideas allowed the Soviets to help foster an independence agenda already at work in Iran to some extent amongst Azeris, Kurds and Balochis. These ethnic groups on the fringe had in the past led insurrections, but now found new support from Soviet proxies. These insurrections along the periphery of Iranian territory that had persisted for centuries revealed the inadequacies in the Shah’s defense and security establishment, and were a driving factor in the modernization of his armed forces. Over the next thirty years, the Shah would be forced to deal with the internal security issues, but would continue to keep an eye at the goal of being the regional powerhouse, with the mechanisms and equipment to achieve both aims.</p>
+
+	  <h4>Modernization Issues</h4>
+
+	  <p>The Shah transitioned from the Anglo-Soviet occupation in the ‘40s and survived the internal political threat from Mosaddeq’s anti-imperial nationalism push with help of American and British intelligence agencies. In 1955, the Shah used the <em>Central Treaty Organization</em> (CENTO, a conglomeration of Turkey, Iraq, Pakistan and Iran) to expand its role as a regional power and requested military equipment from both the US and the Soviets.<sup class='md-footnote'><a href='#dfref-footnote-1' name='ref-footnote-1'>1</a></sup> After the Iraqi monarchy fell to Pan-Arab supporters of the Soviets, Iran found itself at the center of American Cold war strategy, and requested additional support from the United States in a 1959 bilateral defense agreement.<sup class='md-footnote'><a href='#dfref-footnote-2' name='ref-footnote-2'>2</a></sup> Yet, indicative to his future role of maximizing requests at the behest of both the Americans and Soviets, the Kennedy administration wrote in 1961 that the Shah “insists on our supporting an expensive army too large for border incidents and internal security and of no use in an all-out war.”<sup class='md-footnote'><a href='#dfref-footnote-3' name='ref-footnote-3'>3</a></sup></p>
+
+	  <p>The events that ultimately pushed forward the massive Iranian military modernization effort came in 1971, with the formation of the <em>Organization of Petroleum Exporting Countries</em> (OPEC), thus doubling Iran’s oil revenues in less than a year due to the controlled distribution model.<sup class='md-footnote'><a href='#dfref-footnote-4' name='ref-footnote-4'>4</a></sup> In 1971 Iran had $885M of oil revenue, but by 1975 they had increased that to $17.8B, a twenty-fold increase.<sup class='md-footnote'><a href='#dfref-footnote-5' name='ref-footnote-5'>5</a></sup> Also in 1971, the British completed their withdrawal from Iran, and according to the Nixon Doctrine, the US expected the region to police itself, without direct US involvement. In light of these developments, Iran increased its defense expenditures from $900M to $9.4B, a ten-fold increase that saw the acquisition of key military equipment and the development of a new corps of competent military professionals seeking to increase Iranian influence in the region.<sup class='md-footnote'><a href='#dfref-footnote-6' name='ref-footnote-6'>6</a></sup></p>
+
+	  <h4>US Interests in Iran</h4>
+
+	  <p>The US supported the build up of the Iranian military, but failed to create sustainable models of development that could address the imbalances in Gulf security, Iran’s need to grow economically, and to provide a comprehensive, but realistic, defense of the nation. The US had a complex relationship with the region, ceding influence to the British after WWII through the 1960’s, even actively disengaging from oil production opportunities that opened up following the  Iranian coup in 1953. Yet, the fear of communism’s spread pushed the US to continually re-engage with Iran despite the British withdrawal the Nixon Doctrine’s pledge to allow all regions to support themselves. The Shah brilliantly convinced the US that their loyalty to the west was not guaranteed, and frequently bought enough military hardware from the Soviets to spur an influence battle and increased funding. Yet, the threat of the Soviets in Iran was indeed real, and later Soviet records indicate a number of plans to raise coups within Iran by influencing ethnic minorities and corrupt government officials.<sup class='md-footnote'><a href='#dfref-footnote-7' name='ref-footnote-7'>7</a></sup> While the US understood that Iran would at best be able to slow a full-scale Soviet assault, it could at least provide an additional shield and a strategic piece of land in central Asia, as well as a friendly state to patrol the Gulf and maintain order in an area that the US was otherwise disengaged.</p>
+
+	  <h4>Policeman of the Gulf</h4>
+
+	  <p>Despite the American <em>Twin Pillar</em> philosophy of supporting both Iran and the militarily inferior Arabs under Saudi leadership in an attempt to balance the power structure in the region, Iran held the upper hand in both negotiations due to their economic clout and geo-political position in the Cold War. Additionally, the Soviet’s support for the Iraqis and marginalized Iranian ethnicities (Kurds, Balochis, Azeris) forced the Shah towards even greater hegemony over the Gulf. The military arms acquisition concerned not just the underdeveloped Arabs at the time, but even the CIA, which created a psychological profile that described the Shah as a &quot;dangerous megalomaniac&quot;.<sup class='md-footnote'><a href='#dfref-footnote-8' name='ref-footnote-8'>8</a></sup> Despite US reluctance to get involved in the region,  Soviet growth in central Asia made Iran a viable bulwark against the spread of communism.</p>
+
+	  <p><em>Artesh</em>, the name commonly used to refer to the Iranian Armed Forces, did have some great success in their modernization that greatly expanded in the 1970’s. They replicated the US and British model, rebuilt all of their training systems, command structure and even technical manuals off of Western standards, with direct Western assistance and advice. Their actions in the Omani counter-insurgency campaign, in which they seized and held large swathes of land in support of the Omani government, won accolades from Western advisors and conflict monitors, especially by their ability to provide a logistics network for the deployed soldiers and the incremental, but sustainable methods of advancement. However, the rapid pace of buildup caused significant issues, most importantly the lack of continuity-based leadership within the officer and non-commissioned officer corps. Untested, and increasingly partisan military leaders rose through the ranks without gaining essential experience caused ramifications that lasted through the revolution and significantly undermined the Iranian military, both in military operations and in perception amongst the Iranian public. Because such a large portion of this military buildup went towards the acquisition of highly technical equipment (aircraft, ships,  missile systems, etc.), even small disturbances amongst their specially trained technicians or replacement needs created uncontrollable ripple effects in their military. Additionally, the military was ill-equipped to address such dangers as internal dissent or small-scale skirmishes with the necessary precision and proportionality. The <em>Artesh</em> was building a military to control the Gulf and become a regional policeman, but their unbalanced growth created increasingly fatal flaws in maintaining the Iranian political-military relationship.</p>
+
+	  <h4>The Shah’s Instability</h4>
+
+	  <p>The Shah’s increasing irascibility and sense of grandeur ultimately proved to be his downfall. While Cold War conflicts initially kept his military in check, the vast expansion in oil revenue and  American encouragement to maintain both a western-friendly disposition and a leadership role in the Gulf further strengthened the Shah’s desire to further modernize an externally-focused military, leaving internal issues to regional police and the gendarmerie. While the Shah may have been justified in rebuilding an aging fleet of aircraft, ships and missiles, his ultimate endeavors saw the purchase of such equipment as the F-14 with advanced avionics that even the US, developers of the equipment, had trouble incorporating into their fleet and strategic objectives. In a telling example, while the typical military might allocate 3% of their defense spending towards artillery, Iran had almost 30%, showing the disproportionate adherence towards massive strikes, but lacking the accompanying intelligence sharing and joint service operations that are necessary to use these weapons effectively.<sup class='md-footnote'><a href='#dfref-footnote-9' name='ref-footnote-9'>9</a></sup> Despite the highest accolades of the future US Chairman of the Joint Chiefs of Staff, Colin Powell, who remarked favorably at the tailored uniforms and ferocious-looking weaponry after a parade in 1978, the Iranian military in the 1970’s hid glaring inadequacies.<sup class='md-footnote'><a href='#dfref-footnote-10' name='ref-footnote-10'>10</a></sup></p>
+
+	  <p>The Shah grew concerned at the possibility of a coup and continually shifted his officers, removing any that grew too powerful or seemed to wield too much influence amongst the troops. This lack of continuity did not allow commanders to create and undertake long-term visions for their units, or gain the personal connections that are needed to both fully understand the unit’s mission and implement necessary change. Using SAVAK and his own internal security team, he monitored and limited contact between military commanders to ensure they did not form alliances or build power bases, which obviously debilitated essential communication. Additionally, Iranian technical talent could not develop at the intense rate of acquisition, forcing them to rely on American maintainers and technicians, as well as American factories for part replacement. Finally, because the Shah eventually promoted a small set of sycophants to the highest positions rather than truly competent officers, the links between the Shah and the bulk of the military were strained. He specifically acted against military involvement with politics and conscripts were isolated from civilian society, which perceived the military as aloof and unreliable.</p>
+
+	  <h4>Shah Downfall</h4>
+
+	  <p>The Artesh largely focused on external security and patrolling the Gulf, most notably in defense of Iraqi raids along the Shatt al-Arab waterway that brought both countries’ armies to full-mobilization along the border in 1969 and again in 1971. Meanwhile, the situation on the domestic front was quickly becoming untenable. Through the &#39;60’s and &#39;70s, the Shah’s violently quelled dissent amongst ethnic minorities and tribal chiefs, such as the Qashqai and Bakhtiari. While this created short periods of quiet, it also fomented a new degree of underground political activism along the fringes of Iranian territory and myriad new skirmishes between militants and gendarmeries. Within the urban areas, the widespread suppression of the Left and Islamists overreached, unwittingly strengthening support and sympathy for both groups. For instance, when the Shah ordered the arrest of Ayatollah Ruhollah Khomeini in 1963, Tehran was engulfed in three days of violent protests, with over three hundred killed and several hundred wounded. This demonstrated the lack of training and preparedness of both the gendarmerie and the military, which stepped in with lethal weaponry and brutal tactics in what could otherwise have been a limited protest that ebbed, thus beginning a series of protest escalations over the next fifteen years which set the stage for further violence in domestic affairs.</p>
+
+	  <p>In 1978, protests by Islamists picked up while the Shah focused on external threats and Leftist guerrilla groups simultaneously carried out bombings and assassinations within Iran. The <em>Mujahedin-e-Khalq</em> (MEK), the militant arm of the Tudeh Leftist party, was perhaps the most powerful of these groups and successfully carried out bank robberies to fund their activities. Because of the assassination of eight American military advisors and contractors between 1973-1976, there was US pressure on the Shah to suppress the Leftist groups, which is perhaps why he ignored the rise of the populist Islamic parties calling for his overthrow. By May of 1977, Iran’s oil revenue plummeted, forcing millions into unemployment and into the hands of populist leaders that were able to take advantage of this economic turn, especially the mullahs. As the exiled Khomeini and his supporters in Iran organized protests through 1978, the Shah had simultaneously lost support from virtually all segments of society through his autocratic style and focus on external threats that were of no benefit to the average Iranian.</p>
+
+	  <p>Ayatollah Khomeini understood the importance of neutralizing military intervention in the protests, and his followers fostered personal relationships with the conscripts while isolating leadership from their own troops. They applied pressure to conscripts’ families and recruited  others to spread revolutionary literature, both on the Left and with the Islamists. They called on the conscripts to honor their religious obligations in deserting the military, and promised positions within the revolution should they abandon their posts. When, in a January 1978 newspaper editorial, the government blamed the rise in violence on Islamic extremists without accepting a role in the escalation, protests broke out. Two mullahs were shot by troops, and their turbans were displayed as symbols of the bloody repression of the common Iranian. Protests quickly spread to Tabriz and Tehran, where the Shah sent paratroopers to arrest student leaders at the university. When the initially neutral and moderate Ayatollah Muhammad Kazim Shariat-Madari was wounded, he actively joined the opposition and brought along his numerous followers, who subsequently brought along members of his mosque network, creating an immediate change in the dynamics and balance of power. The Shah responded by firing General Nassiri and over thirty officers of SAVAK, the very same team that would have provided intelligence the Shah needed in understanding the nature of the protests.<sup class='md-footnote'><a href='#dfref-footnote-11' name='ref-footnote-11'>11</a></sup> Not only did this action dismember an essential agency and demoralize the rest of its agents, but the move also showed the Shah to be weak and indecisive for giving in.</p>
+
+	  <p>After Islamic militants locked the Cinema Rex movie theater and set it on fire, killing four hundred moviegoers, the carnage was incorrectly blamed on the government and disillusioned SAVAK agents. Marches grew into the hundreds of thousands and the Shah responded by firing even more officers, releasing prisoners and attempting to negotiat. Again, the protestors saw the Shah as weak and when orders of martial law in Jaleh were not adequately communicated to the public, troops killed over two hundred citizens on what is now called “Black Friday.”<sup class='md-footnote'><a href='#dfref-footnote-12' name='ref-footnote-12'>12</a></sup> This series of protests escalated beyond the control of the government and the Shah’s responses undermined his own agencies with no gain - the Shah was out of touch with reality which opened up many opportunities for the revolutionaries to exploit.</p>
+
+	  <h4>Ayatollah Khomeini’s Return</h4>
+
+	  <p>The final events of the Shah’s rule occurred when military commanders refused to intervene in a student revolution in Tehran in November of 1978, and a full retreat from other engagements followed. The Shah appointed the indecisive General Azhari as Prime Minister, which further disengaged the military, and officers were unable to deal an astronomical desertion rate of over a  thousand enlisted troops per day.<sup class='md-footnote'><a href='#dfref-footnote-13' name='ref-footnote-13'>13</a></sup> Last-ditch efforts to censor publications, close universities and put military vehicles (including tanks) in the streets simply agitated more people, and PM Azhari resigned after a heart attack, leaving no government hierarchy. The Americans, in a last-ditch effort, sent General Robert Huyser to Iran in an attempt to rehabilitate the military and rebuild a semblance of a command structure.<sup class='md-footnote'><a href='#dfref-footnote-14' name='ref-footnote-14'>14</a></sup> Yet, <em>Artesh</em> showed almost no initiative in creating a contingency plan, instead relying on the hope that America would conduct a full-scale intervention, and refused to act without specific Shah approval. As Stephen Ward writes, “The generals wanted Huyser to tell them what to do, the Shah came to believe that the American general was responsible for arranging a deal between the revolutionaries and the military to end the monarchy, and the revolutionaries were convinced Huyser was in Iran to promote a coup.”<sup class='md-footnote'><a href='#dfref-footnote-15' name='ref-footnote-15'>15</a></sup> In a telling foreshadowing, Huyser warned the military that they would be the first to be purged in a new regime, and many of them were indeed executed in the coming years.</p>
+
+	  <p>Upon Khomeini’s return, many of the generals assumed that they were immune from punishment due to their influence and expertise, and expected to be taken into counsel for the transition period post-revolution. However, the rank structure and the relationship between the revolutionaries and the military was in chaos. Almost immediately, Islamic groups, including a sizable number that had earlier been in the military, formed <em>kohmitehs</em>, and began enforcing Islamic law, as well as holding trials of those involved in the earlier repression of the revolution. Many of these groups were not under Khomeini’s control, and the lack of continuity created an anarchic security situation. In May, Khomeini established the <em>Sepah-e-Pasdaran-e Equlab-e Eslami</em>, otherwise known as the Islamic Revolutionary Guard Corps, the paramilitary establishment that would change the direction of Iran’s armed forces.<sup class='md-footnote'><a href='#dfref-footnote-16' name='ref-footnote-16'>16</a></sup> With the intent to build a parallel military to eventually take command of the conventional military, the Guard recruited Islamic-minded individuals and consolidated many of the <em>kohmitehs</em> and Islamic militant groups to enforce domestic order. Khomeini saw this as an opportunity to put numerous militant and rival Islamic groups under his control, but the decision to allow them leeway in enforcing social order and morality would have dire consequences for large swathes of urban Iran. In a strategic move, he would allow the <em>kohmitehs</em> to follow through with the more difficult missions and those with social implications, such as morality oversight, and then depending on the result either take credit for the action or denounce the individual <em>kohmitehs</em>. By 1983, most <em>kohmitehs</em> were under Khomeini’s command, while the rest were purged along with the Leftists.</p>
+
+	  <p>The military remained the prime target for revolutionary reprisals, and all bases were monitored by Guard, and later Basij, units to ensure there were no unauthorized movements. Over four hundred generals and senior security officers were executed in the first six months of the revolution, with untold numbers arrested, imprisoned or disappeared.<sup class='md-footnote'><a href='#dfref-footnote-17' name='ref-footnote-17'>17</a></sup> Much of this involved personal vendettas and posturing for future promotions, and the military itself saw over 250,000 desertions of members unwilling to chance being caught in the deadly purge. To compensate for the loss of manpower, recruitment for both Artesh and the Guard accelerated in poor rural areas, and Khomeini-aligned clerics ensured a thoroughly Islamic education system for the military. Virtually all soldiers with essential technical skills were put into remedial morality training based on Islamic primacy, along with an endless cycle of committees to redefine the military. Only on the eve of the Iraq war did the purges end, especially when the new government understood that the technical experts on weapon systems and tactics that were about to be used had largely left Iran or resigned. Khomeini attempted to quell the purges, offering full amnesty to military members and broadcast sermons forgiving the military, but the damage to <em>Artesh</em> was done.</p>
+
+	  <p>By the mid-1980’s, the Guard had over twenty-five thousand dedicated members with approximately 100,000 in reserve.<sup class='md-footnote'><a href='#dfref-footnote-18' name='ref-footnote-18'>18</a></sup> However, their tactical training was very limited, mostly dealing with small-scale repression of political groups, but no training in warfare. In conjunction with the purge of <em>Artesh</em>, Iran lacked the ability to adequately operate within the region militarily, and Khomeini put a disproportionate amount of time redefining the military and its objectives in Islamic terms, rather than preparing for modern warfare engagements. He created a Political-Ideological Directorate under the Ministry of Defense, consisting of clerics that were present down to the platoon level to provide Islamic guidance in any military operations and evaluate the Islamic observance of individual members. These intermediaries caused a serious deterioration in interpersonal relations, as trust within the ranks broke down.<sup class='md-footnote'><a href='#dfref-footnote-19' name='ref-footnote-19'>19</a></sup> Simultaneously, while the military was losing its operational potential, threats were growing along Iran’s periphery, with autonomy movements again reviving amongst Kurds, Balochis and Arabs. The military attempted to intervene, but was in disarray - many platoons refused to deploy or fire on protestors, while others responded with an inordinate amount of lethal force. Iraq, seeing an opportunity, began arming Kurdish groups and sending money and trainers into Iran to weaken and divert their attention from the major oil fields and waterways in the south. In August 1979, the Guard disregarded <em>Artesh</em> advice and unilaterally went on the offense in the Kurdish town of Paveh, where they were completely destroyed.<sup class='md-footnote'><a href='#dfref-footnote-20' name='ref-footnote-20'>20</a></sup> Khomeini had to convince <em>Artesh</em> to suppress the rebels, but <em>Artesh</em> remained reluctant to involve itself in domestic situations. The Guard continued to suppress the growing revolutions, at some points having to work on six different major protests at a time, including those by militant Leftist groups in urban centers.</p>
+
+	  <p>While ethnic protests were spreading, the Leftist movement was fighting amongst itself, putting all their emphasis on purging the military and advocating an anti-capitalism and anti-imperial political platform. Tudeh, the major Leftist group, fully participated in purges of fellow Leftist groups, and coordinated actions with the clerics to eradicate competition. Khomeini pursued the strategy of allowing Tudeh to destroy their own competitors, one by one; he then turned against Tudeh in 1982, executing over 1800 Tudeh members in three months. The Guards’ role in these activities was paramount, and would pave the way for later actions in quelling dissent by using inordinate violence and executions to terrorize the population. By late 1980, at least ten thousand Iranians were executed by <em>kohmitehs</em>, a half million emigrated from Iran, and Khomeini was at a low of popularity, having reneged on almost all deals with revolution coalition members.<sup class='md-footnote'><a href='#dfref-footnote-21' name='ref-footnote-21'>21</a></sup></p>
+
+	  <h4>Iran-Iraq War</h4>
+
+	  <p>Khomeini would have likely lost control of the revolution had it not been for Iraq’s entry into Iran and the beginning of a decade-long war that caused massive casualties and zero change in territory. While Saddam Hussein saw an utterly weakened Iran with a revolutionary leader at a nadir of support, Khomeini used the initiation of war to reassert Iranian nationalism. When Iraq invaded in September of 1980, Iran’s defense capability was virtually non-existent. Between 40-60% of the military from 1979 was no longer present, and with the cessation of relations with the US, over half of the equipment that they had purchased over the past decade no longer worked, a trend that would only worsen as the US refused to replace parts and Iran no longer had the technical expertise to maintain the equipment.<sup class='md-footnote'><a href='#dfref-footnote-22' name='ref-footnote-22'>22</a></sup> While Iraq saw a quick war as a way to achieve their objectives in humiliating their Shi’ite neighbor and seize important oil facilities along Iran’s western coast, Iran played a large role in exacerbating tensions. The Guard attempted to assassinate Tariq Aziz, an officer in Saddam Hussein’s inner ring, and armed clashes erupted along the border following an Iraqi attack on the Iranian embassy in London.</p>
+
+	  <p>While Artesh was barely functioning and the Guard was focused on internal issues, there were virtually no functioning entities able to defend the borders against a full-scale incursion. Immediately, the Guard put their limited resources into recruiting entire swathes of the population and providing them with quick, two-week indoctrination and small-arms courses before sending them to the front lines. Advanced training came to a standstill, and even tank commanders admitted that tank warfare was taught only in a classroom; combat was the first time most of the recruits could practice even the simplest tactics.<sup class='md-footnote'><a href='#dfref-footnote-23' name='ref-footnote-23'>23</a></sup> As the Guard could not adequately address the crisis, segments of <em>Artesh</em> regrouped and gained enough autonomy to mobilize and make decisions without political approval. Their ability to counter the Iraqi invasion gained them an entirely new level of trust from Khomeini. The purging of Shah officers over the previous year, in addition to a gradual Islamization of the force, impressed upon Iran that there was still a need for a conventional force relatively removed from the political, religious and economic constraints of the revolution.</p>
+
+	  <p>While Artesh focused on coordinating military action and rebuilding their combat power, the Guard continued their recruitment of <em>Pasdaran</em> (Guardians), reaching 250,000 by 1985.<sup class='md-footnote'><a href='#dfref-footnote-24' name='ref-footnote-24'>24</a></sup> Yet, despite the escalation in numbers, they did not have enough weaponry, even basic small arms, to equip their men. Additionally, Khomeini established the Basij in 1979 with the intent of creating an internal, auxiliary police force focused solely on domestic issues that fell under the Guard’s command structure. The quick escalation of the invasion and the need to bring more people to the front, no matter their capabilities, established an Islamic martyrdom system that would prove crucial to the war effort. This intense ideological indoctrination system, geared towards poor, rural Iranians that were ethnically Persian, truly convinced men to sacrifice their bodies for the revolution. While many were told fabrications about the state of combat and the risks involved, a significant number joined the war effort knowing full well the dire situation. Raids and offensives would typically involve unarmed Basiji on the backside of any raid in order to pick up the weapons of enemies or fellow Iranians that died on the battlefield. Additionally, the concepts of <em>jihad</em> and the goal of martyrdom became the premier ideological tool in creating a fundamentalist mentality that created an environment promoting heroic, but costly, actions on the battlefield. Indoctrination took place throughout the country, beginning at the earliest stages of education and ensuring that an entire generation of Iranians would be radicalized by warfare, Islamic fundamentalism and revolutionary spirit.</p>
+
+	  <p>While a conventional war raged between Iraq and Iran, Khomeini made an effort to use his Guard and Basij members to create instability throughout the region, pushing the revolutionary mandate across the region. The Guard’s new role in fomenting insurrections, conducting assassinations and undermining regional stability is a theme of Iranian revolutionaries that has continued to this day. Khomeini standardized irregular warfare with the creation of the Quds force, another Guard-controlled entity focused on covert foreign warfare, and further solidifying the clerics’ rule over foreign diplomacy. Because the command structure allows for the movement of these operators to engage in both external and internal issues, many of the most violent means used in warfare were subsequently copied and utilized in quelling internal dissent. In perhaps the best example, Khomeini recruited, trained and financed Hezbollah, the group which still operates in Southern Lebanon and has played a major role in Israeli consciousness. Iran’s ability to build support for Islamic ideals and revolutionary spirit at the grassroots level has allowed Iran to operate effectively at the societal level despite their inability to make breakthroughs at the conventional level.</p>
+
+	  <h4>Overall effects of Iraq-Iran War</h4>
+
+	  <p>The Iraqi leaders that prosecuted this war were politicized and unqualified, but possessed firepower and the support of many outside nations. Iran, on the other hand, had a mass of advanced weaponry that was largely unworkable and unfixable, a military that contained very little of the technical expertise it had just two years before, and was in a bloody transition period. However, the Iraqis did not factor in the quickness with which Khomeini was able to instill Revolutionary jihad and gather a large number of citizens willing to go to the front, where they took extremely heavy casualties. These martyrs were successful in bringing the war into a virtual stalemate, however catastrophic the losses were. Iran had approximately 220,000 battlefield deaths, over 40% of which were the uneducated, lightly armed but zealously Islamic Basijis, who would later use their talents in working for the regime to quell dissent and become the face of combat-hardened veterans moving towards internal social issues.<sup class='md-footnote'><a href='#dfref-footnote-25' name='ref-footnote-25'>25</a></sup> While <em>Artesh</em> played a major role in fighting and coordinating in defense of Iran, Khomeini put his efforts into building a paramilitary Revolutionary Guard that could occupy military issues as well as keep an eye on the social issues while controlled by the Shi’ite clerical class of Iran. By the end of the decade-long conflict, Iranian society was devastated and tired of warfare, cowed into accepting Khomeini’s rule, and sapped of secessionist or neo-revolutionary action. Combined with this new force dedicated towards internal political suppression, the clerics had their perfect opportunity to fully assert their authority and build Iran according to the fundamental Shiite ideals.</p>
+
+	  <h4>Psychology of Basij</h4>
+
+	  <p>In any armed conflict, there is a psychological impact on both the soldiers and citizens. The Iranian war generation suffered from the same effects of trauma as other nations, and in many ways the rigid ideological pronouncements and political suppression simply exacerbated an already tense situation. The effect of censored television and radio broadcasts throughout Iran stressed a life of martyrdom, sacrifice, political unity and Islam that held uncompromising views on debate and diversity. As Khomeini and the clerics continued to propagate their own message to Iran, they continued their fight on both the foreign and domestic front, simultaneously holding off Iraqi incursions and violently quelling dissent amongst the Kurds, Arabs and Balochis. Khomeini wanted to win the war, but was also heavily engaged in ensuring that any post-war political environment would be to his advantage. On some level, the ‘imposed’ war benefitted the revolution by giving an extended period in which he could solidify his rule and quell domestic dissent through an established national crisis.</p>
+
+	  <p>Saddam understood the tenuous nature of Iran’s post-revolution military, and his timing of the invasion looked to take advantage of the chaos. The initial Iranian defense force was a hodgepodge of cobbled together entities: <em>Artesh</em> (the conventional military), the fledgling Iranian Revolutionary guard, the Basij, remnants of SAVAK and the Ministry of Interior Intelligence, and elements of informal <em>kohmitehs</em> that did not have an official relationship with the government but engaged in some limited defensive operations. However, the devastating impact of the initial fighting and the subsequent stalemate and border hostilities resembling trench warfare encouraged the regime to expand their recruitment, focusing mainly on the religious rural areas that would go on to populate the bulk of the Basij and take the brunt of the casualties in the war.</p>
+
+	  <p>Iran had a draft system in place, but there was little to no enforcement. The peer-based volunteer system was not as effective in the urban populations, where there was diversity in opinion and mindset, and a significant enough population of anti-war activists. Yet, despite the large numbers of casualties, only a small portion of Iran actually participated directly in the war. It is estimated that there were between 1.5 and 3 million soldiers participating in operations through the duration of the war, yet over 9 million men between the ages of 15 and 35 were available during that same timeframe.<sup class='md-footnote'><a href='#dfref-footnote-26' name='ref-footnote-26'>26</a></sup> Compared to other instances of total war, this percentage of population is staggeringly small and illustrates a desire to control the future political environment and course of war, infusing sacrifice, martyrdom and Islam into the dialogue. When conventional military tactics could do no more than maintain a stalemate, Iran turned to a volunteer system that highlighted rural respectability and guerilla warfare and stressed Islamic  martyrdom over tactics, weaponry or strategy.</p>
+
+	  <p>Animosity grew unabated between the rural and urban populations based on their percieved sacrifices, and Khomeini worked to undermine leftist and secular groups by disseminating information to the front-line volunteers, whether true or not, that these groups were actively treasonous and working with Iraqis to destroy Iran. Iranian draft dodgers and those not willing to volunteer further isolated themselves from a rural population that was making significant sacrifices. Because the Basij education that now encompassed most of Iran obsessed over Islamic sacrifice, the national narrative was furthering the chasm between Iranian society based on taking action in the war.</p>
+
+	  <p>Once the war ended, political dialogue quickly changed as new president Khatami discussed the dire need to address other issues, especially the devastated infrastructure and economics of the country after ten years of destruction. In a telling confrontation, President Khatami answered criticism of why political rallies had “dancing and celebrations”, with “excessive freedom given to young women and men in order to remain loved by people.”<sup class='md-footnote'><a href='#dfref-footnote-27' name='ref-footnote-27'>27</a></sup> Despite the need to address financial and social issues, veterans largely viewed the change in dialogue as a danger to the status quo, and their importance diminished as they went from saviors and defenders of Iran to recipients of medical assistance and pensions. Veterans viewed youths that strived for western values, such as democracy and social freedom, as un-Islamic and enemies of Iran while the youth viewed the veteran dialogue of sacrifice as a means to suppress progress and development. Some of the urban elites that were now driving the economic recovery viewed the veterans as drains on the economy, with little skills to add to the nation. This separation of ideals created a hierarchy of  societal involvement, which would grow in importance when the war ended and the Basij took over domestic political operations.</p>
+
+	  <h4>Basij Relation with Guard</h4>
+
+	  <p>The Basij are directly under the Guard (IRGC) in the chain-of-command and are trained, organized and deployed under the Guard&#39;s leadership. War veterans dominate the higher echelons of leadership, although there is a generation gap as newer members are youth that have also emerged fully indoctrinated under the martyrdom ideology. They are ill equipped, and the vast majority of the training is based on Islamic ideology, with limited tactics and limited influence in strategic or doctrinal issues. In the Iran-Iraq War, the Basij was involved in almost all of the martyrdom operations, including rushing Iraqi defensive positions without weaponry. However, when the war ended, there were initially no obvious uses for the Basij, which cost money to maintain, and while sizable, would have little impact in any future conventional engagements with regional enemies. Reaching a nadir of influence in 1990 as their usefulness diminished, the clerics and IRGC saw their potential as a reserve domestic force that could quickly mobilize and deploy to domestic hot spots and complete basic functions, such as riot control, urban surveillance and arrests. In general, the Basij were the enforcers of authority created and organized by the clerics and their IRGC proxies. Because they have a relatively small active component of 90,000, the Basij is modeled after a broad social organization that deploys mainly in regional domestic operations, with the aim of total social engagement in revolutionary affairs. In the 151<sup>st</sup> article of the 1979 Iranian constitution, Khomeini worked to ensure that</p>
+	
+	  <blockquote>
+	  <p>The government is obliged to provide a program of military training, with all requisite facilities, for all its citizens, in accordance with the Islamic criteria, in such a way that all citizens will always be able to engage in the armed defense of the Islamic Republic of Iran. The possession of arms, however, requires the granting of permission by the competent authorities.<sup class='md-footnote'><a href='#dfref-footnote-28' name='ref-footnote-28'>28</a></sup></p>
+	  </blockquote>
+
+	  <p>Iranian Parliament further defined the role of the Basij with a four point agenda: homeland defense against foreign aggression, “Protecting the Revolution and its achievements by countering internal enemies,” participating in disaster relief and maintaining the moral order of the country.<sup class='md-footnote'><a href='#dfref-footnote-29' name='ref-footnote-29'>29</a></sup> While the Iran-Iraq war quickly found a purpose for a broad swath of the population to involve themselves in a dangerous war of attrition that relied on manpower, the Basij fit perfectly within the construct of the revolution. When the war ended, however, the clerics were at a loss as to how the Basij could reincorporate with civilian life and not become a drain on an overloaded economy. The low-cost training, small active component and quick deployment of reserves are essential to understanding the Basij.</p>
+
+	  <p>To illustrate the spirit of the Basij with statistics, or at least the intent of the numbers, Basij commander Hossein Ta’eb claimed to have 13.6 million Basij participants in 2008, approximately 20% of the entire population of Iran. However, of these, 5 million were women and 4.7 million were children, and of the four million remaining there is likely a sizable number of elderly, injured and youth, bringing the estimate of actual Basij operators to 1.5 million.<sup class='md-footnote'><a href='#dfref-footnote-30' name='ref-footnote-30'>30</a></sup> Furthermore, interviews with Basij indicated some level of indifference to government policies, but rather intent to achieve social mobility. Peter Martonosi refers to one twenty-five year old Basij member who reasoned, “The only reason I stay in the Basij is for the money, but many of my friends in the Basij are unhappy with the government.”<sup class='md-footnote'><a href='#dfref-footnote-31' name='ref-footnote-31'>31</a></sup> It is unknown how large the effective portion of the Basij is, and it is even harder to determine how many of them are truly loyal to the regime; however, the core of war veterans which now make up the upper echelons of the organization have created an environment that indicates a deep following of clerical policy and devout Islam, and have illustrated their resolve in the student protests of 1999 and the Green revolution of 2009.</p>
+
+	  <p>In addition to the reserve police components, the Basij have expanded into dominant positions in business, agriculture, and even education, which is ironic given that they led the academic purge of the early 1980s. They created the Lecturers Basij Organization in universities, enrolling 15,000, or over 25% of higher-level academia, and ensured career progression assistance for its members.<sup class='md-footnote'><a href='#dfref-footnote-32' name='ref-footnote-32'>32</a></sup> All members had to subscribe and promote their subject under the guise of Islam, and more specifically Islam with a revolutionary perspective, to influence the coming generation of college educated young adults. Combined with the 650,000 students enrolled in the Student Basij Organization, the impact they have on education is profound. Recent events have seen the purging of secular curriculum and professors and the infusion of Islamic ideology into virtually all subjects through the secondary level. Even at the youngest levels, the Basij run nation-wide camps directed towards elementary school children, instructing the tenets on the same sort of Islamic curriculum that they would find in later years.<sup class='md-footnote'><a href='#dfref-footnote-33' name='ref-footnote-33'>33</a></sup> The Basij, as a direct liaison for the IRGC, and thus the clerics, are the small-unit mobilizers of action within society, and while not necessarily involved in the shaping of Iranian doctrine (which is done by the clerics and Ayatollah), are indispensable in executing the orders from the top levels.</p>
+
+	  <h4>Conclusion</h4>
+
+	  <p>It is difficult to fully understand the impact that the revolution has had on the nation of Iran, and there are discussions taking place even amongst themselves as to where the nation is heading, and whether the revolutionary ardor is still relevant in today’s environment. In the years leading up to the revolution, perhaps the most important component was the Shah’s modernization and arming of the military. Ironically, while the infrastructure developments were necessary and the arming of the military could have paid dividends had it been combined with rational policies of military chain of command and political developments, it ultimately failed because of the suppression of dissent and autocratic disconnect with economic and societal needs. Additionally, the perception that technology and progress could not sustain a society drove the revolution, and would provide the future ideological standards with the onset of the Iran-Iraq war. The military weaponry that would have been effective in combat was useless due to lack of maintenance and parts replacement, while Iranian martyrdom and Islamic ideology at some level defended against Iraqi aggression. Instead, the revolution incurred massive casualties and destruction to society as resources were deployed to war rather than building infrastructure or the economy. The revolution equated Westernization directly with the failed policies of the Shah; the pendulum swing in the other direction created a society that stifled dissent and would experience full-scale purges of everything from academia to government and military.</p>
+
+	  <p>The Iran-Iraq war created a generation of veterans that were infused with the concept of martyrdom, sacrifice and Islam, and would go on to form the next generation of leaders in society. However, the vast majority of the volunteers, who also took the majority of the casualties during the war, were the Basij militias, who did not necessarily have leadership abilities beyond the small unit. These typically conservative, religious individuals hit a nadir of influence directly after the war, but found their political niche in supporting the regime with their quick deployments with large numbers of people capable of quelling internal dissent. As seen in the 1999 student revolution, and more recently in the Green revolution, the Basij have found their political power by enforcing moral standardization in a revolutionary and Islamic context and supporting the regime in a low-cost model, which greatly enhances clerical reach to all segments of Iranian society. The animosity the older Basij have towards the ‘urban elite’, whether based upon justified grievances or not, has fueled violent quelling of domestic political unrest, and illustrates the remnants of the Iran-Iraq war.</p>
+
+
+<div class='footnotes-area'  ><hr/>
+
+	<div class='footnote-line'><span class='md-fn-count'>1</span> 
+		Steven Ward, <em>Immortal: A Military History of Iran and its Armed Forces</em> (Washington: Georgetown University Press, 2009), 192. 
+		<a name='dfref-footnote-1' href='#ref-footnote-1' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>2</span> 
+		Kajendra Singh, <em>Iran: Quest for Security</em> (New Delhi: Vikas Press, 1980), 65. 
+		<a name='dfref-footnote-2' href='#ref-footnote-2' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>3</span> 
+		Ruhollah K. Ramazani, <em>Iran’s Foreign Policy, 1941-1973: A Study of Foreign Policy in Modernizing Nations</em> (Charlottesville: University Press of Virginia, 1975), 360. 
+		<a name='dfref-footnote-3' href='#ref-footnote-3' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>4</span> 
+		Ward, 193. 
+		<a name='dfref-footnote-4' href='#ref-footnote-4' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>5</span> 
+		Ward, 193. 
+		<a name='dfref-footnote-5' href='#ref-footnote-5' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>6</span> 
+		Gholamali Chegnizadeh, “Persian Military Modernization, 1921-1979” (Bradford: University of Bradford), 1997), 303. 
+		<a name='dfref-footnote-6' href='#ref-footnote-6' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>7</span> 
+		James Clark, <em>On the Cold War, And the Crisis in Azerbaijan of March 1946</em> (Modern Orient: V23, N3, 2004), 557-559. 
+		<a name='dfref-footnote-7' href='#ref-footnote-7' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>8</span> 
+		Michael Palmer, <em>Guardians of the Gulf: A History of America’s Expanding Role in the Persian Gulf, 1833-1992</em> (New York: Avon Books, 1991), 90. 
+		<a name='dfref-footnote-8' href='#ref-footnote-8' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>9</span> 
+		Ward, 196. 
+		<a name='dfref-footnote-9' href='#ref-footnote-9' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>10</span> 
+		Colin Powell, <em>My American Journey</em> (New York: Random House, 1995), 240-242. 
+		<a name='dfref-footnote-10' href='#ref-footnote-10' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>11</span> 
+		Shaul Bakhash, <em>The Reign of the Ayatollah</em> (London: IB Tauris &amp; Co, 1985), 14-16. <a name='dfref-footnote-11' href='#ref-footnote-11' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>12</span> 
+		John Stempel, <em>Inside the Iranian Revolution</em> (Bloomington: Indiana University Press, 1981), 133. <a name='dfref-footnote-12' href='#ref-footnote-12' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>13</span> 
+		Stempel, 134. 
+		<a name='dfref-footnote-13' href='#ref-footnote-13' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>14</span> 
+		Stempel, 134. 
+		<a name='dfref-footnote-14' href='#ref-footnote-14' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>15</span> 
+		Ward, 221. 
+		<a name='dfref-footnote-15' href='#ref-footnote-15' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>16</span> 
+		Sepehr Zabih, <em>The Iranian Military in Revolution and War</em> (London: Routledge, 1988), 42. 
+		<a name='dfref-footnote-16' href='#ref-footnote-16' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>17</span> 
+		Nikola Schahgaldian, <em>Iranian Military Under the Islamic Republic</em> (Santa Monica: RAND Corporation, 1987), 26-27. 
+		<a name='dfref-footnote-17' href='#ref-footnote-17' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>18</span> 
+		Schahgaldian, 28. 
+		<a name='dfref-footnote-18' href='#ref-footnote-18' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>19</span> 
+		Zabih, 123-125. 
+		<a name='dfref-footnote-19' href='#ref-footnote-19' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>20</span> 
+		“Kurds Said to Repel 400 Iranian Troops from Rebel Center,” <em>New York Times</em>, 3 Sept 1979. 
+		<a name='dfref-footnote-20' href='#ref-footnote-20' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>21</span> 
+		Ward, 241. 
+		<a name='dfref-footnote-21' href='#ref-footnote-21' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>22</span> 
+		Mark Roberts, <em>Khomeini’s Incorporation of the Iranian Military</em> (Washington DC: National Defense University, 1996), 51. 
+		<a name='dfref-footnote-22' href='#ref-footnote-22' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>23</span> 
+		Ward, 241-243. 
+		<a name='dfref-footnote-23' href='#ref-footnote-23' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>24</span> 
+		Kenneth Katzman, <em>The Warriors of Islam: Iran’s Revolutionary Guard</em> (Boulder, CO: Westview Press, 1993), 221. 
+		<a name='dfref-footnote-24' href='#ref-footnote-24' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>25</span> 
+		Neguin Yavari, “National, Ethnic and Sectarian Issues in the War,” <em>Iranian Perspectives on the Iran-Iraq War</em>, edited by Farhang Rajaee (Gainesville: University of Florida Press, 1997), 84. 
+		<a name='dfref-footnote-25' href='#ref-footnote-25' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>26</span> 
+		Farideh Farhi, “The Antinomies of Iran’s War Generation,” <em>Iran, Iraq and the Legacies of War</em> (New York: Palgrave, 2004), 105. 
+		<a name='dfref-footnote-26' href='#ref-footnote-26' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>27</span> 
+		Farhi, 102. 
+		<a name='dfref-footnote-27' href='#ref-footnote-27' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>28</span> 
+		<em>Article 151</em>. Constitution of the Islamic Republic of Iran. 
+		<a name='dfref-footnote-28' href='#ref-footnote-28' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>29</span> 
+		“Niruyeh Moghavemat Basij,” <em>Global Security Intelligence</em>, March 2013. &lt;
+		<a href='http://www.globalsecurity.org/intell/world/iran/basij.htm&amp;gt;' target='_blank' class='url'>http://www.globalsecurity.org/intell/world/iran/basij.htm&gt;</a> 
+		<a name='dfref-footnote-29' href='#ref-footnote-29' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>30</span> 
+		“The Rise of the Pasdaran,” RAND National Defense Research Institute (Santa Monica, 2009), 46. 
+		<a name='dfref-footnote-30' href='#ref-footnote-30' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>31</span> 
+		Peter Martonosi, “The Basij, A Major Factor in Iranian Security” National University of Public Service, Budapest, Hungary AARMS (V11, N1, 20012), 14. 
+		<a name='dfref-footnote-31' href='#ref-footnote-31' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>32</span> 
+		“Rise of the Pasdaran,” 39. 
+		<a name='dfref-footnote-32' href='#ref-footnote-32' title='back to document' class='reversefootnote' >↩</a></div>
+
+	<div class='footnote-line'><span class='md-fn-count'>33</span> 
+		“Rise of the Pasdaran,” 38-40. 
+		<a name='dfref-footnote-33' href='#ref-footnote-33' title='back to document' class='reversefootnote' >↩</a></div></div>
+			
+	</div>
+</div>	  
+
 </body>
 </html>
