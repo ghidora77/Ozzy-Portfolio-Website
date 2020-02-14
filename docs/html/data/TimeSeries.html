@@ -41,7 +41,9 @@
 	<h5><b>Sales vs. % Difference</b></h5>
 	<p>This is one of my favorite Time Series visuals. On the top portion you have the sales figure and on the bottom you have the percentage change in in sales for each interval. In the percent change portion, the magnitude of the sales is shown by the size and color (dark blue, thick lines indicates relatively high sales, while red, thin lines indicate relatively low sales). While looking at either one of these separately (or even more difficult, in a chart), it's difficult to grasp the full story. Look at March 2016 - The percent change is steep, at 31.2%, but the sales figure shows a relatively modest jump from $87k to $114. This is because the sales in the month before was at a low point, so even modest increase in sales will have an exaggerated percentage increase. By contrast, January is following a high-point (December 2015) and continues to increase at a modest 3.2%, which is still great - yet the % difference chart shows that growth is starting to recede. This dashboard works together to provide a full picture of the change in data.    </p>
 
-	<div class='tableauPlaceholder' id='viz1579567298738' style='position: relative'>
+	<div class='tableauPlaceholder' 
+		 id='viz1579567298738' 
+		 style='position: relative'>
             <noscript>
       <a href='#'>
 		  <img alt=' ' 
@@ -270,88 +272,9 @@
 				vizElement.parentNode.insertBefore(scriptElement, vizElement);
 			</script>
 
-
-		<h5><b>30-Day Moving Average</b></h5>
-		<p>Same overall concept, but .</p>
-
-			<div class='tableauPlaceholder' id='viz1579568318496' style='position: relative'>
-            <noscript>
-              <a href='#'>
-				  <img alt=' ' 
-					   src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TimeSeries-30-DayMovingAverage&#47;30-dayMovingAvgYearlyBreakdown&#47;1_rss.png' 
-					   style='border: none' /></a>
-              </noscript>
-            <object class='tableauViz'  style='display:none;'>
-                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                <param name='embed_code_version' value='3' />
-                <param name='site_root' value='' />
-                <param name='name' value='TimeSeries-30-DayMovingAverage&#47;30-dayMovingAvgYearlyBreakdown' />
-                <param name='tabs' value='no' />
-                <param name='toolbar' value='yes' />
-                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TimeSeries-30-DayMovingAverage&#47;30-dayMovingAvgYearlyBreakdown&#47;1.png' />
-                <param name='animate_transition' value='yes' />
-                <param name='display_static_image' value='yes' />
-                <param name='display_spinner' value='yes' />
-                <param name='display_overlay' value='yes' />
-                <param name='display_count' value='yes' />
-              </object>
-          </div>
-            <script type='text/javascript'>
-				var divElement = document.getElementById('viz1579568318496');
-				var vizElement = divElement.getElementsByTagName('object')[0];
-				vizElement.style.minWidth='960px';
-				vizElement.style.maxWidth='1180px';
-				vizElement.style.width='100%';
-				vizElement.style.minHeight='827px';
-				vizElement.style.maxHeight='927px';
-				vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-				var scriptElement = document.createElement('script');
-				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
-				vizElement.parentNode.insertBefore(scriptElement, vizElement);
-			</script>
-
-
-		<h5><b>Dynamic Date Filters</b></h5>
-		<p>Add Info</p>
-
-			<div class='tableauPlaceholder' id='viz1579568355062' style='position: relative'>
-					<noscript>
-			  <a href='#'>
-				  <img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TimeSeries-DynamicDateFilters&#47;DynamicDateFilters&#47;1_rss.png' style='border: none' /></a>
-			  </noscript>
-					<object class='tableauViz'  style='display:none;'>
-				<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-				<param name='embed_code_version' value='3' />
-				<param name='site_root' value='' />
-				<param name='name' value='TimeSeries-DynamicDateFilters&#47;DynamicDateFilters' />
-				<param name='tabs' value='no' />
-				<param name='toolbar' value='yes' />
-				<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TimeSeries-DynamicDateFilters&#47;DynamicDateFilters&#47;1.png' />
-				<param name='animate_transition' value='yes' />
-				<param name='display_static_image' value='yes' />
-				<param name='display_spinner' value='yes' />
-				<param name='display_overlay' value='yes' />
-				<param name='display_count' value='yes' />
-			  </object>
-				  </div>
-			<script type='text/javascript'>
-				var divElement = document.getElementById('viz1579568355062');
-				var vizElement = divElement.getElementsByTagName('object')[0];
-				vizElement.style.minWidth='960px';
-				vizElement.style.maxWidth='1180px';
-				vizElement.style.width='100%';
-				vizElement.style.minHeight='827px';
-				vizElement.style.maxHeight='927px';
-				vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-				var scriptElement = document.createElement('script');
-				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
-				vizElement.parentNode.insertBefore(scriptElement, vizElement);
-			</script>
-
-
 		<h5><b>Running Total Over year</b></h5>
 
-		<p>Add Info.</p>
+		<p>This visual is just like above, but doesn't reset each month. Both provide an excellent way of understanding how different years (or categories, if you choose) have performed. </p>
 
 
 			<div class='tableauPlaceholder' id='viz1579568379691' style='position: relative'>
@@ -391,8 +314,93 @@
 			</script>
 
 
-		<h5><b>f</b></h5>
-		<p>More Info.</p>
+		<h5><b>30-Day Moving Average</b></h5>
+		<p>Same overall concept as the earlier moving average, but this just contains a 30-day moving average calculation broken up by year, not the full, daily values. This is a useful graph while trying to understand the path of the time series data without the noise of daily fluctuations. I wouldn't make decisions based solely upon this visual, but it's helpul in building up background knowledge.</p>
+
+			<div class='tableauPlaceholder' 
+				 id='viz1579568318496' 
+				 style='position: relative'>
+            <noscript>
+              <a href='#'>
+				  <img alt=' ' 
+					   src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TimeSeries-30-DayMovingAverage&#47;30-dayMovingAvgYearlyBreakdown&#47;1_rss.png' 
+					   style='border: none' /></a>
+              </noscript>
+            <object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='TimeSeries-30-DayMovingAverage&#47;30-dayMovingAvgYearlyBreakdown' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TimeSeries-30-DayMovingAverage&#47;30-dayMovingAvgYearlyBreakdown&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+              </object>
+          </div>
+            <script type='text/javascript'>
+				var divElement = document.getElementById('viz1579568318496');
+				var vizElement = divElement.getElementsByTagName('object')[0];
+				vizElement.style.minWidth='960px';
+				vizElement.style.maxWidth='1180px';
+				vizElement.style.width='100%';
+				vizElement.style.minHeight='827px';
+				vizElement.style.maxHeight='927px';
+				vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+				var scriptElement = document.createElement('script');
+				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
+				vizElement.parentNode.insertBefore(scriptElement, vizElement);
+			</script>
+
+
+		<h5><b>Dynamic Date Filters</b></h5>
+		<p>This is an easy to understand method to quickly filter data and focus in on priorities. The orange identifies those items that need to be addressed, and by clicking on the top portion of the bar chart you can quickly understand the magnitude of each account. This is a simple business case, but is an excellent tool to give a manager or leader oversight of a project, their customers, research, etc. I use a similar dashboard to quickly identify assets and liabilities and address them based on importance.</p>
+
+			<div class='tableauPlaceholder' 
+				 id='viz1579568355062' 
+				 style='position: relative'>
+					<noscript>
+			  <a href='#'>
+				  <img alt=' ' 
+					   src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TimeSeries-DynamicDateFilters&#47;DynamicDateFilters&#47;1_rss.png' style='border: 8px' /></a>
+			  </noscript>
+					<object class='tableauViz'  style='display:none;'>
+				<param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+				<param name='embed_code_version' value='3' />
+				<param name='site_root' value='' />
+				<param name='name' value='TimeSeries-DynamicDateFilters&#47;DynamicDateFilters' />
+				<param name='tabs' value='no' />
+				<param name='toolbar' value='yes' />
+				<param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ti&#47;TimeSeries-DynamicDateFilters&#47;DynamicDateFilters&#47;1.png' />
+				<param name='animate_transition' value='yes' />
+				<param name='display_static_image' value='yes' />
+				<param name='display_spinner' value='yes' />
+				<param name='display_overlay' value='yes' />
+				<param name='display_count' value='yes' />
+			  </object>
+				  </div>
+			<script type='text/javascript'>
+				var divElement = document.getElementById('viz1579568355062');
+				var vizElement = divElement.getElementsByTagName('object')[0];
+				vizElement.style.minWidth='960px';
+				vizElement.style.maxWidth='1180px';
+				vizElement.style.width='100%';
+				vizElement.style.minHeight='400px';
+				vizElement.style.maxHeight='400px';
+				vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+				var scriptElement = document.createElement('script');
+				scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                   
+				vizElement.parentNode.insertBefore(scriptElement, vizElement);
+			</script>
+
+
+		
+
+		<h5><b>Sum of Sales with Running Total</b></h5>
+		<p>This method lets you see quite a few things very quickly. For each month, there is a stacked bar-chart that gives a categorical breakdown of sales (and the tooltip provides the exact value). If necessary, you can remove and add categories to focus in on certain segments. Also, there is an orange line that provides a running calculation of either the total or the average (note that the y-axis for the selection is on the right). Combining bar charts and line graphs gives you control over the data.   </p>
 
 			<div class='tableauPlaceholder' id='viz1579568423352' style='position: relative'>
 					<noscript>
@@ -431,7 +439,7 @@
 			</script>
 
 		<h5><b>Conclusion</b></h5>
-		<p>Tableau is a great way to quickly put together some visuals and explore your data. Combined with an engineering .</p>
+		<p>Tableau is a great way to quickly put together some visuals and explore your data. I'll write more on this later, but I wanted to get the visuals out there..</p>
 
 		</div>
 	</div>
